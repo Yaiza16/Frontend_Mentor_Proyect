@@ -107,9 +107,8 @@
     letter-spacing: 1px;
 }
 
-.attribution{
-    padding-top: 50px;
+@media screen and (max-width: 400px){
+.card{
+    width: 90%;
 }
-
-
-
+}

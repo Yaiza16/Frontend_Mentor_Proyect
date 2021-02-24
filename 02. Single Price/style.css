@@ -131,3 +131,42 @@ body{
     font-weight: 200;
 }
 
+@media screen and (max-width: 450px){
+    .card{
+        width: 85%;
+        height: auto;
+        display: grid;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card__part{
+        padding: 20px; 
+    }
+
+    .card__part-2{
+        border-radius: 0;
+    }
+
+    .card__part-3{
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+    }
+
+    .card__subtitle-1{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .card__price{
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+
+    .card__subtitle-3{
+        padding-bottom: 15px;
+    }
+}
+
+
