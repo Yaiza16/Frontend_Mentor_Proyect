@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+    --primary-color: hsl(257, 40%, 49%);
+    --secundary-color: hsl(300, 69%, 71%);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    height: 100vh;
+    background: url(images/bg-desktop.svg);
+    background-size: cover;
+    background-color: var(--primary-color);
+}
+
+.header__logo{
+    height: 20%;
+    padding-left: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.logo__img{
+    height: 50%;
+    max-height: 50px;
+}
+
+.main__container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 700px auto;
+    grid-template-areas: 
+    "illustration texts";
+}
+
+.container__illustration{
+    grid-area: illustration;
+    padding: 12px 0 0 60px;
+}
+
+.illustration{
+    width: 100%;
+    max-width: 600px;
+}
+
+.container__texts{
+    padding: 60px 60px 0 50px;
+}
+
+.text__title{
+    font-weight: 600;
+    font-size: 2.3em;
+    padding-right: 40px;
+}
+
+.text__paragraph{
+    font-family: 'Open Sans';
+    padding-top: 20px;
+    line-height: 25px;
+}
+
+.text__button{
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    margin-top: 20px;
+    padding: 15px 60px;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.534);
+    background: white;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.text__button:hover{
+    background: var(--secundary-color);
+    color: white;
+}
+
+.footer__icons{
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    padding-right: 60px;
+    padding-bottom: 40px;
+}
+
+.fab{
+    text-decoration: none;
+    margin-right: 15px;
+    padding: 10px; 
+    border-radius: 100px;
+    border: 1px solid white;
+}
+
+.fa-facebook-f{
+    padding: 10px 13px;
+}
+
+.fab:hover{
+    color: var(--secundary-color);
+    border: 1px solid var(--secundary-color);
+}
