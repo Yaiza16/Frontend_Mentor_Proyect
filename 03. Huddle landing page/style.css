@@ -22,6 +22,16 @@ body{
     position: relative;
 }
 
+@media screen and (max-width: 500px){
+    body{
+        height: auto;
+        background: url(images/bg-mobile.svg);
+        background-size:contain;
+        background-repeat: no-repeat;
+        background-color: var(--primary-color);
+    }
+}
+
 .header__logo{
     height: 20%;
     padding-left: 70px;
@@ -30,9 +40,23 @@ body{
     margin-bottom: 10px;
 }
 
+@media screen and (max-width:500px){
+    .header__logo{
+        margin: 40px 0 80px;
+        padding-left: 50px;
+    }
+}
+
+
 .logo__img{
     height: 50%;
     max-height: 50px;
+}
+
+@media screen and (max-width:500px){
+    .logo__img{
+        width: 40%;
+    }
 }
 
 .main__container{
@@ -44,10 +68,30 @@ body{
     "illustration texts";
 }
 
+@media screen and (max-width: 500px){
+    .main__container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "illustration" 
+        "texts";
+    }
+}
+
 .container__illustration{
     grid-area: illustration;
     padding: 12px 0 0 70px;
 }
+
+@media screen and (max-width:500px){
+    .container__illustration{
+        padding: 0;
+        width: 80%;
+        justify-self: center;
+    }
+}
+
 
 .illustration{
     width: 100%;
@@ -57,16 +101,37 @@ body{
     padding: 60px 60px 0 50px;
 }
 
+@media screen and (max-width:500px){
+    .container__texts{
+        text-align: center;
+    }
+}
+
 .text__title{
     font-weight: 600;
     font-size: 2.3em;
     padding-right: 40px;
 }
 
+@media screen and (max-width:500px){
+    .text__title{
+        font-size: 1.5em;
+        padding-right: 0;
+    }
+}
+
 .text__paragraph{
     font-family: 'Open Sans';
     padding-top: 30px;
     line-height: 25px;
+}
+
+@media screen and (max-width:500px){
+    .text__paragraph{
+        font-size: 15px;
+        padding-top: 0;
+        margin-top: 20px;
+    }
 }
 
 .text__button{
@@ -80,6 +145,14 @@ body{
     background: white;
     color: var(--primary-color);
     text-decoration: none;
+}
+
+@media screen and (max-width:500px){
+    .text__button{
+        margin-top: 25px;
+        padding: 10px 80px;
+    }
+    
 }
 
 .text__button:hover{
@@ -96,6 +169,15 @@ body{
     align-content: center;
     padding-right: 60px;
     padding-bottom: 40px;
+}
+
+@media screen and (max-width:500px){
+    .footer__icons{
+        position: static;
+        justify-content: center;
+        padding: 0;
+        margin: 80px 0 30px;
+    }
 }
 
 .fab{
