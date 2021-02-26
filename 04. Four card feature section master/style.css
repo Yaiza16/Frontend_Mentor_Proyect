@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+    --background-color: hsl(0, 0%, 98%);
+    --fonts-color: hsl(229, 6%, 66%);
+    --fonts-color-secundary: hsl(234, 12%, 34%);
+    --padding-cars: 30px;
+    --border-card-red: hsl(0, 78%, 62%);
+    --border-card-cyan: hsl(180, 62%, 55%);
+    --border-card-orange: hsl(34, 97%, 64%);
+    --border-card-blue: hsl(212, 86%, 64%);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    color: var(--fonts-color);
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background{
+    height: 100vh;
+    padding: 20px;
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.texts__section{
+    width: 38%;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.texts__title{
+    font-size: 2rem;
+    font-weight: 200;
+    color: #000;
+}
+
+.texts__title-signature{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.cards__section{
+    width: 80%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    ". team ."
+    "supervisor team calculator"
+    "supervisor karma calculator"
+    ". karma .";
+    gap: 30px;
+}
+
+.card{
+    position: relative;
+    padding: var(--padding-cars);
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.233);
+    border-radius: 10px;
+}
+
+
+.card-supervisor{
+    grid-area: supervisor;
+    border-top: 4px solid var(--border-card-cyan);
+
+}
+
+.card-team{
+    grid-area: team;
+    border-top: 4px solid var(--border-card-red);
+
+}
+
+.card-karma{
+    grid-area: karma;
+    border-top: 4px solid var(--border-card-orange);
+
+}
+
+.card-calculator{
+    grid-area: calculator;
+    border-top: 4px solid var(--border-card-blue);
+
+}
+
+.card__texts__title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--fonts-color-secundary); 
+    margin-bottom: 10px;  
+}
+
+.card__texts__information{
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+}
+
+.card__imagen{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: var(--padding-cars);
+   
+}
+
