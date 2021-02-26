@@ -30,10 +30,22 @@
     align-items: center;
 }
 
+@media screen and (max-width: 800px){
+    .background{
+        height: auto;
+    }
+}
+
 .texts__section{
     width: 38%;
     text-align: center;
     margin: 40px 0;
+}
+
+@media screen and (max-width: 800px){
+    .texts__section{
+        width: 80%;
+    }
 }
 
 .texts__title{
@@ -61,6 +73,13 @@
     "supervisor karma calculator"
     ". karma .";
     gap: 30px;
+}
+
+@media screen and (max-width: 800px){
+    .cards__section{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .card{
@@ -112,7 +131,14 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    padding: var(--padding-cars);
-   
+    padding: var(--padding-cars);   
+}
+
+@media screen and (max-width: 800px){
+    .card__imagen{
+        position: relative;
+        text-align: right;
+        padding: 10px 0 0;
+    }
 }
 
