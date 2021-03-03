@@ -16,7 +16,7 @@
 }
 
 .main{
-    background: url(images/bg-pattern-top-desktop.svg) no-repeat, url(images/bg-pattern-bottom-desktop.svg) no-repeat 150% 0%;
+    background: url(images/bg-pattern-top-desktop.svg) no-repeat, url(images/bg-pattern-bottom-desktop.svg) no-repeat bottom right;
     padding: 7%;
     width: 100%;
     height: 100vh;
@@ -28,10 +28,34 @@
     "comments comments";
 }
 
+@media screen and (max-width:500px){
+    .main{
+        background: url(images/bg-pattern-top-mobile.svg) no-repeat, url(images/bg-pattern-bottom-mobile.svg) no-repeat bottom right;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .main{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 30px;
+
+    }
+}
+
 
 .info{
     grid-area: info;
     padding-right: 20%;
+}
+
+@media screen and (max-width:500px){
+    .info{
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
 }
 
 .info__title{
@@ -39,6 +63,12 @@
     color: var(--primary-color);
     font-weight: 700;
     line-height: 60px;
+}
+
+@media screen and (max-width:500px){
+    .info__title{
+        padding: 5%;
+    }
 }
 
 .info__text{
@@ -66,6 +96,15 @@
     font-weight: 600;
 }
 
+@media screen and (max-width:500px){
+    .ratings__part{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}
+
 .ratings__part:nth-child(2){
     align-self: center;
 }
@@ -85,6 +124,15 @@
     column-gap: 20px;
     justify-content: space-between;
     margin-top: 20px;
+}
+
+@media screen and (max-width:500px){
+    .comments{
+        margin-top: 60px;
+        flex-direction: column;
+        text-align: start;
+        row-gap: 25px;
+    }
 }
 
 .comments__card{

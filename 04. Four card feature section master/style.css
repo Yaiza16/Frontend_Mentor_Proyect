@@ -88,6 +88,9 @@
     background: #fff;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.233);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -128,10 +131,8 @@
 }
 
 .card__imagen{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: var(--padding-cars);   
+    align-self: flex-end;
+
 }
 
 @media screen and (max-width: 800px){
