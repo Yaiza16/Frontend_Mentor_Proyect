@@ -9,3 +9,5 @@ Frontend coding challenges from [Frontend Mentor](https://www.frontendmentor.io)
 [03. Four card feature section](https://www.frontendmentor.io/solutions/four-card-feature-section-HxEtHhfzp)   —   [My solution](https://huddle-landing-page-three-xi.vercel.app/)
 
 [04. Four card feature section master](https://www.frontendmentor.io/solutions/four-card-feature-section-master-mKhRs75hP)   —   [My solution](https://four-card-feature-yaiza.netlify.app/)  
+
+[05. Social proof section](https://www.frontendmentor.io/solutions/social-proof-section-sgGxXhqXu)   —   [My solution](https://social-proof-yaiza.netlify.app/)
