@@ -1,6 +1,6 @@
 # Frontend Mentor - Profile card component
 
-[My solution](https://frontend-mentor-proyect.vercel.app/)
+[Link to finished projec](https://frontend-mentor-proyect.vercel.app/)
 
 ![Design preview for the Profile card component coding challenge](./design/desktop-preview.jpg)
 

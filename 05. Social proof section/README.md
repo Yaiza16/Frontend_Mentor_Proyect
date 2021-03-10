@@ -1,7 +1,8 @@
 # Frontend Mentor - Social proof section
 
-[My version](https://social-proof-yaiza.netlify.app/)
-![Design preview for the Social proof section coding challenge](./design/desktop-preview.jpg)
+[Link to finished project](https://social-proof-yaiza.netlify.app/)
+
+![Design preview for the Social gproof section coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
 

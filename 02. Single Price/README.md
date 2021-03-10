@@ -1,6 +1,6 @@
 # Frontend Mentor - Single Price Grid Component
 
-[My solution](https://single-price-rose-seven.vercel.app/)
+[Link to finished projec](https://single-price-rose-seven.vercel.app/)
 
 
 

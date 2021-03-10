@@ -1,6 +1,6 @@
 # Frontend Mentor - Four card feature section
 
-[My version](https://four-card-feature-yaiza.netlify.app/)
+[Link to finished projec](https://four-card-feature-yaiza.netlify.app/)
 
 ![Design preview for the Four card feature section coding challenge](./design/desktop-preview.jpg)
 

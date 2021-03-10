@@ -1,5 +1,7 @@
 # Frontend Mentor - Testimonials grid section
 
+[Link to finished project](https://testimonials-section-yaiza.netlify.app/)
+
 ![Design preview for the Testimonials grid section coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋

@@ -1,6 +1,6 @@
 # Frontend Mentor - Huddle landing page with single introductory section
 
-[My version](https://huddle-landing-page-three-xi.vercel.app/)
+[Link to finished projec](https://huddle-landing-page-three-xi.vercel.app/)
 
 
 
