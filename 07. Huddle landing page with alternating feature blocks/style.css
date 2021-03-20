@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+
+:root{
+    --primary-color: hsl(322, 100%, 66%);
+    --secundary-color: #ebfbff;
+    --tertiary-color: hsl(192, 100%, 9%);
+    --fourth-color: hsl(208, 11%, 55%);
+    --padding-sections: 4%;
+
+}
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: var(--tertiary-color);
+}
+
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.hero{
+    background-color: var(--secundary-color);
+    background-image: url(images/bg-hero-desktop.svg);
+    height: 100vh;
+    padding: var(--padding-sections);
+}
+
+.hero__nav{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.nav__logo{
+    height: 30px;
+}
+
+.logo__img{
+    height: 100%;
+}
+
+.button{
+    padding: 10px 60px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 8px  rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: .3s ease;
+
+}
+
+.button__try:hover{
+    opacity: .8;
+}
+
+.button__subscription{
+    background: #fff;
+    font-weight: 700;
+}
+
+.button__subscription:hover{
+    color: rgba(0, 0, 0, 0.74);
+}
+
+.hero__main{
+    display: grid;
+    grid-template-columns: auto 700px;
+    grid-template-areas: 
+    "text photo";
+    align-items: center;
+    gap: 80px;
+}
+
+.main__description{
+    grid-area: text;
+}
+
+.description__title{
+    margin-bottom: 20px;
+}
+
+.button__try{
+    margin-top: 20px;
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    transition: .3s ease;
+}
+
+.main__photo{
+    grid-area: photo;
+    width: 650px;
+}
+
+.photo__img{
+    width: 100%;
+}
+
+.work{
+    padding: 70px;
+    padding-top: 100px;
+    padding-bottom: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+}
+
+.section{
+    display: flex;
+    border-radius: 25px;
+    box-shadow: 1px -1px 10px  rgba(0, 0, 0, 0.1);
+    padding: 40px 30px 40px 100px;
+    align-items: center;
+    gap: 200px;
+}
+
+
+
+.section__info__text{
+    margin-top: 15px;
+    color: var(--fourth-color);
+}
+
+.section__imagen{
+    width: 700px;
+}
+
+.section__imagen--change{
+    order: 1;
+}
+
+.section__info--change{
+    order: 2;
+}
+
+.section__imagen__img{
+    width: 100%;
+}
+
+/* alert section */
+
+.alert{
+    position: absolute;
+    display: inline-block;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 50px 90px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px -1px 10px  rgba(0, 0, 0, 0.1);    
+}
+
+.alert__title{
+    font-size: 1.6rem;
+    color: var(--tertiary-color);
+}
+
+.alert__button{
+    margin-top: 20px;
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    transition: .3s ease;
+
+}
+
+.alert__button:hover{
+    opacity: .8;
+}
+
+
+/* Footer */
+
+.site__footer{
+    background-color: var(--tertiary-color);
+    color: var(--secundary-color);
+    padding: 110px 100px 30px;
+}
+
+.footer__logo{
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.logo__img{
+    fill: var(--secundary-color)!important;
+    transition: .3s ease;
+
+}
+
+.site__footer p,
+.site__footer a {
+    color:var(--secundary-color);
+    font-size: .8em;
+}
+
+.footer__information{
+    display: flex;
+    gap: 130px;
+}
+
+.contact__place{
+    width: 35%;
+}
+
+.contact__place__section{
+    display: flex;
+    gap: 25px;
+    padding:8px 0;
+}
+
+.contact__section{
+    display: flex;
+    gap: 100px;
+}
+
+.contact__section a{
+    display: block;
+    text-decoration: none;
+    padding: 8px 0;
+}
+
+.contact__section a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    
+}
+
+.svg-inline--fa {
+    height: 15px;
+    border: 1px solid var(--secundary-color);
+    border-radius: 50%;
+    padding: 10px;
+    box-sizing: content-box;
+    margin: 0 10px;
+    transition: .3s ease;
+}
+
+.fa-facebook-f{
+    padding: 10px 14px;
+}
+
+.svg-inline--fa:hover {
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+}
+
+.svg-inline--fa:hover > .logo__img{
+    fill: var(--primary-color)!important;
+}
+
+.copyright{
+    text-align: right;
+}
