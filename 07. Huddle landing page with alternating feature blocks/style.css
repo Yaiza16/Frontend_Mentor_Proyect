@@ -38,18 +38,47 @@ h3{
     padding: var(--padding-sections);
 }
 
+@media screen and (max-width:500px){
+    .hero{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .hero__nav{
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
 }
 
-.nav__logo{
-    height: 30px;
+@media screen and (max-width:500px){
+    .hero__nav{
+        padding-top: 20px;
+    }
 }
+
+.nav__logo{
+    height: 2.2em;
+}
+
+@media screen and (max-width:500px){
+    .nav__logo{
+        width: 30%;
+    }
+}
+
 
 .logo__img{
     height: 100%;
+}
+
+@media screen and (max-width:500px){
+    .logo__img{
+        width: 100%;
+        height: auto;
+    }
 }
 
 .button{
@@ -58,7 +87,6 @@ h3{
     box-shadow: 1px 1px 8px  rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: .3s ease;
-
 }
 
 .button__try:hover{
@@ -70,21 +98,40 @@ h3{
     font-weight: 700;
 }
 
+@media screen and (max-width:500px){
+    .button__subscription{
+        width: 100%;
+        padding: 4px 30px;
+        font-size: 0.8em
+    }
+}
+
 .button__subscription:hover{
     color: rgba(0, 0, 0, 0.74);
 }
 
 .hero__main{
-    display: grid;
-    grid-template-columns: auto 700px;
-    grid-template-areas: 
-    "text photo";
-    align-items: center;
+    display: flex;
+    width: 100vw;
     gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:500px){
+    .hero__main{
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .main__description{
-    grid-area: text;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .description__title{
@@ -100,8 +147,14 @@ h3{
 }
 
 .main__photo{
-    grid-area: photo;
-    width: 650px;
+    width: 66%;
+    max-width: 650px;
+}
+
+@media screen and (max-width:500px){
+    .main__photo{
+        width: 100%;
+    }
 }
 
 .photo__img{
@@ -118,6 +171,13 @@ h3{
     position: relative;
 }
 
+@media screen and (max-width:500px){
+    .work{
+        padding: 100px 20px 250px;
+        padding-bottom: 200px;
+    }
+}
+
 .section{
     display: flex;
     border-radius: 25px;
@@ -125,6 +185,17 @@ h3{
     padding: 40px 30px 40px 100px;
     align-items: center;
     gap: 200px;
+}
+
+@media screen and (max-width:500px){
+    .section{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 70px;
+    }
+
 }
 
 
@@ -136,6 +207,19 @@ h3{
 
 .section__imagen{
     width: 700px;
+}
+
+@media screen and (max-width:500px){
+    .section__imagen{
+        width: 100%;
+        order: 1;
+    }
+}
+
+@media screen and (max-width:500px){
+    .section__info{
+        order: 2;
+    }
 }
 
 .section__imagen--change{
@@ -165,9 +249,22 @@ h3{
     box-shadow: 1px -1px 10px  rgba(0, 0, 0, 0.1);    
 }
 
+@media screen and (max-width:500px){
+    .alert{
+        padding: 20px;
+        width: 90%;
+    }
+}
+
 .alert__title{
     font-size: 1.6rem;
     color: var(--tertiary-color);
+}
+
+@media screen and (max-width:500px){
+    .alert__title{
+        font-size: 1em;
+    }
 }
 
 .alert__button{
@@ -176,8 +273,13 @@ h3{
     background: var(--primary-color);
     color: #fff;
     transition: .3s ease;
-
 }
+
+@media screen and (max-width:500px){
+    .alert__button{
+        font-size: .7em;
+        padding: 10px 40px;
+    }
 
 .alert__button:hover{
     opacity: .8;
@@ -190,6 +292,12 @@ h3{
     background-color: var(--tertiary-color);
     color: var(--secundary-color);
     padding: 110px 100px 30px;
+}
+
+@media screen and (max-width:500px){
+    .site__footer{
+        padding: 110px 3% 30px;
+    }
 }
 
 .footer__logo{
@@ -214,8 +322,27 @@ h3{
     gap: 130px;
 }
 
+@media screen and (max-width:500px){
+    .footer__information{
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .footer__information{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .contact__place{
     width: 35%;
+}
+
+@media screen and (max-width:500px){
+    .contact__place{
+        width: 100%;
+    }
 }
 
 .contact__place__section{
@@ -229,6 +356,14 @@ h3{
     gap: 100px;
 }
 
+@media screen and (max-width:500px){
+    .contact__section{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+}
+
 .contact__section a{
     display: block;
     text-decoration: none;
@@ -239,6 +374,13 @@ h3{
     text-decoration: underline;
     cursor: pointer;
     
+}
+
+@media screen and (max-width:500px){
+    .contact__socialMedia{
+        text-align: center;
+        margin-bottom: 15px;
+    }
 }
 
 .svg-inline--fa {
@@ -266,4 +408,11 @@ h3{
 
 .copyright{
     text-align: right;
+}
+
+@media screen and (max-width:500px){
+    .copyright{
+        text-align: center;
+        font-size: .6em!important;
+    }
 }
