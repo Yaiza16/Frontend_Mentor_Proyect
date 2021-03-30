@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif; */
+
+:root{
+    --padding-side: 50px;
+    --primary-color-darkBlue: hsl(243, 87%, 12%);
+    --secundary-color-brightBlue: hsl(224, 93%, 58%);
+    --background-color-productivity:hsl(240, 75%, 98%);
+    --extLink-color-productivity: hsl(170, 45%, 43%);
+    --paragrahp-color: hsl(0, 0%, 75%);
+    --background-color-access: hsl(238, 22%, 44%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+}
+
+h2{
+    font-size: 2em;
+    font-family: 'Raleway', sans-serif;
+    color: var(--primary-color-darkBlue);
+    padding: 10px 0;
+}
+
+h3{
+    font-size: 1.8em;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+}
+
+p{
+    line-height: 1.5em;
+    color: var(--primary-color-darkBlue);
+    padding: 10px 0;
+}
+
+input{
+    font-family: 'Raleway', sans-serif;
+}
+
+.button{
+    background-color: var(--secundary-color-brightBlue);
+    color: #fff;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+}
+
+
+.invalid__input{
+    font-size: 0.7em;
+    padding: 0;
+    display: none;
+    margin-top: 2px;
+}
+
+
+/* HEADER  */
+.header__site{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px var(--padding-side) 20px;
+    align-items: center;
+}
+
+.header__nav{
+    display: flex;
+    gap: 30px;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: var(--primary-color-darkBlue);
+}
+
+.section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ACCESIBILITY SECTION */
+
+.accessibility{
+    padding: 40px var(--padding-side) 250px;
+    background-image: url(images/bg-curve-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.accessibility__info{
+    width: 50%;
+}
+
+.accesibility__image{
+    width: 50%;
+}
+
+.accesibility__image__img{
+    width: 100%;
+    height: 100%;
+}
+
+.accesibility__info__email{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+}
+
+/* .accesibility__email__container{ 
+    display: inline;
+    height: 100%;
+}  */
+
+.accesibility__email{
+    padding-left: 10px;
+    margin-right: 10px;
+    width: 50%;
+}
+
+.accesibility__email:invalid{
+    border: 1px solid red;
+}
+
+.accesibility__email:invalid~.invalid__input__accessibility{
+    display:block;
+    color: red;
+    width: 100%;
+}
+
+
+
+
+
+
+/* PRODUCTIVITY SECTION */
+.productivity{
+    padding: 40px var(--padding-side) 60px;
+    background-color: var(--background-color-productivity);
+}
+
+.productivity__info{
+    width: 60%;
+}
+
+.productivity__image{
+    width: 40%;
+}
+
+.productivity__image__img{
+    width: 100%;
+}
+
+.productivity__info__paragh{
+    padding-right: 30%;
+}
+
+.productivity__info__extLink{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.extLink__text{
+    display: inline;
+    color: var(--extLink-color-productivity);
+    border-bottom: 1px solid var(--extLink-color-productivity);
+    padding: 4px 0;
+    cursor: pointer;
+}
+
+.productivity__info__testimonial{
+    width: 50%;
+    background-color: white;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 0.8em;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.089);
+}
+
+.testimonial__person{
+    display: flex;
+    gap: 10px;
+}
+
+.testimonial__quote{
+    width: 18px;
+}
+
+.testimonial__text{
+    padding-top: 5px;
+}
+
+.testimonial__person__avatar{
+    width: 40px;
+}
+
+.testimonial__person__img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.testimonial__person__info p{
+    margin: 0;
+    padding: 0;
+}
+
+.testimonial__person__name{
+    font-weight: bold;
+}
+
+
+
+/* ACCESS SECTION */
+.access{
+    background-color: var(--background-color-access);
+    padding: 50px var(--padding-side);
+    align-items: stretch;
+    gap: 50px;
+}
+
+.access__info{
+    width: 50%;
+}
+
+.access__info p{
+    padding-top: 20px;
+    color: #fff;
+}
+
+.access__form__container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.access__form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+}
+
+.access__form__input{
+    width: 90%;
+    height: 3.5em;
+}
+
+.access__form__button{
+    width: 50%;
+    padding: 15px 25px;
+    margin-top: 20px;
+}
+
+.access__form__input:invalid{
+    border: 1px solid red;
+}
+
+.access__form__input:invalid+.invalid__input__access{
+    display: block;
+    color: #fff;
+}
+
+
+
+/* FOOTER SECTION */
+.footer{
+    background-color: var(--primary-color-darkBlue);
+    padding: 50px var(--padding-side);
+    font-size: 0.9em;
+    color: var(--paragrahp-color);
+    display: block;
+}
+
+.footer p, .footer a{
+    color: white;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+.footer__logo{
+    display: block;
+}
+
+.logo__container{
+    width: 120px;
+}
+
+.logo{
+    fill: rgb(255, 255, 255)!important;
+}
+
+.footer__logo__information{
+    display: flex;
+    margin-top: 30px;
+}
+
+
+.footer__contact{
+    width: 33.3%;
+}
+
+.icon__contact{
+    display: inline;
+}
+
+.footer__contact__line p{
+    display: inline;
+    margin-left: 20px;
+}
+
+.footer__contact__line:last-child{
+    margin-top: 20px;
+}
+
+
+
+.footer__sections{
+    width: 33.3%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer__sections__column{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__social{
+    color: #fff;
+    padding-left: 100px;
+}
+
+.fab{
+    border: 1px solid #fff;
+    border-radius: 50px;
+    padding: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.fa-facebook-f{
+    padding: 5px 8px;
+}
