@@ -84,6 +84,16 @@ input{
     gap: 30px;
 }
 
+@media screen and (max-width:850px){
+    .header__logo{
+        width: 100px;
+        min-width: 100px
+    }
+
+    .header__logo__img{
+        width: 100%;
+    }
+}
 .nav__link{
     text-decoration: none;
     color: var(--primary-color-darkBlue);
@@ -104,13 +114,39 @@ input{
     background-position: bottom;
 }
 
+
+@media screen and (max-width:850px){
+    .accessibility{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .accessibility__info{
     width: 50%;
 }
 
-.accesibility__image{
+@media screen and (max-width:850px){
+    .accessibility__info{
+        margin-top: 20px;
+        width: 100%;
+        order: 2;
+        text-align: center;
+    }
+}
+
+.accessibility__image{
     width: 50%;
 }
+
+@media screen and (max-width:850px){
+    .accessibility__image{
+        width: 100%;
+        order: 1;
+    }
+}
+
 
 .accesibility__image__img{
     width: 100%;
@@ -121,13 +157,15 @@ input{
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-
 }
 
-/* .accesibility__email__container{ 
-    display: inline;
-    height: 100%;
-}  */
+@media screen and (max-width:500px){
+    .accesibility__info__email{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
 
 .accesibility__email{
     padding-left: 10px;
@@ -135,8 +173,24 @@ input{
     width: 50%;
 }
 
+@media screen and (max-width:550px){
+    .accesibility__email{
+        width: 100%;
+        height: 40px;
+        order: 1;
+    }
+}
+
 .accesibility__email:invalid{
     border: 1px solid red;
+}
+
+@media screen and (max-width:550px){
+    .accesibility__button{
+        order: 3;
+        margin-top: 20px;
+    }
+
 }
 
 .accesibility__email:invalid~.invalid__input__accessibility{
@@ -145,6 +199,14 @@ input{
     width: 100%;
 }
 
+
+@media screen and (max-width:550px){
+    .invalid__input__accessibility{
+        order: 2;
+        text-align: left;
+        margin
+    }
+}
 
 
 
@@ -156,12 +218,38 @@ input{
     background-color: var(--background-color-productivity);
 }
 
+@media screen and (max-width:850px){
+    .productivity{
+        flex-direction: column;
+        
+    }
+}
 .productivity__info{
     width: 60%;
 }
 
+@media screen and (max-width:850px){
+    .productivity__info{
+        order: 2;
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* text-align: center; */
+        align-items: center;
+        /* align-content: center; */
+        
+    }
+}
+
 .productivity__image{
     width: 40%;
+}
+
+@media screen and (max-width:850px){
+    .productivity__image{
+        width: 100%;
+    }
 }
 
 .productivity__image__img{
@@ -171,6 +259,19 @@ input{
 .productivity__info__paragh{
     padding-right: 30%;
 }
+
+@media screen and (max-width:850px){
+    .productivity__info__title{
+        text-align: center;
+    }
+
+    .productivity__info__paragh{
+        padding: 0;
+        margin: 10px;
+        text-align: justify;
+    }
+}
+
 
 .productivity__info__extLink{
     display: flex;
@@ -186,6 +287,7 @@ input{
     cursor: pointer;
 }
 
+
 .extLink__text:hover{
     color: hsl(157, 89%, 72%);
     border-bottom: 1px solid hsl(157, 89%, 72%);
@@ -199,6 +301,12 @@ input{
     font-size: 0.8em;
     border-radius: 4px;
     box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.089);
+}
+
+@media screen and (max-width:850px){
+    .productivity__info__testimonial{
+        width: 90%;
+    }
 }
 
 .testimonial__person{
@@ -242,6 +350,7 @@ input{
     gap: 50px;
 }
 
+
 .access__info{
     width: 50%;
 }
@@ -282,6 +391,26 @@ input{
 .access__form__input:invalid+.invalid__input__access{
     display: block;
     color: #fff;
+}
+
+@media screen and (max-width:700px){
+    .access{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .access__info{
+        width: 100%;
+    }
+
+    .access__form__container{
+        width: 100%;
+    }
+
+    .access__form__input, 
+    .access__form__button{
+        width: 100%;
+    }
 }
 
 
@@ -376,3 +505,21 @@ input{
     color: hsl(224, 94%, 65%);
 }
 
+@media screen and (max-width:700px){
+    .footer__logo__information{
+        flex-direction: column;
+        width: 100%;
+        gap: 50px;
+    }
+
+    .footer__contact, .footer__sections, .footer__social{
+        width: 100%;
+    }
+
+    .footer__sections{
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0;
+        gap: 40px;
+    }
+}
