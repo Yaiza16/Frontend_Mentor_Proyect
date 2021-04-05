@@ -77,11 +77,13 @@ h4{
 /* header menu */
 
 header{
-    /* height: 100vh; */
+    height: 75vh;
     background: url(../images/bg-pattern-intro.svg), linear-gradient(45deg, var(--gradient-intro-light), var(--gradient-intro-dark));
     background-position: 25%;
     padding: 50px var(--pading-left-sections) 100px;
     border-radius: 0 0 0 100px;
+    position: relative;
+    /* padding-bottom: 150px; */
 }
 
 .container-menu{
@@ -114,14 +116,68 @@ header{
 .menu__container-menu ul li .link__menu{
     text-decoration: none;
     color: white;
+    padding: 15px 0 15px 0;
+
+}
+ 
+.items__menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.item__menu:hover{
+    text-decoration: underline;
+
+}
+
+.item__menu:hover > img{
+    transform: rotate(180deg);
+}
+
+.item__menu:hover > .items__submenu{
+    display: block;
+    visibility: visible;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.144);
+}
+
+
+.items__submenu{
+    background-color: white;
+    position: absolute;
+    visibility: hidden;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 20px 30px 20px 15px;
+    position: absolute;
+}
+.item__submenu{
+    padding: 5px;
+}
+
+.link__submenu{
+    width: 100%; 
+    text-decoration: none;
+    color: #000;
+    padding: 5px;
+    font-size: .9em;
+    width: 100%;
+}
+
+.link__submenu:hover{
+    font-weight: 600;
 }
 
 .login__container-menu{
     display: flex;
+    align-items: flex-start;
 }
 
 .login__container-menu a{
     text-decoration: none;
+    height: auto;
     padding: 10px 35px;
     color: white;
 
@@ -145,6 +201,10 @@ header{
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; */
 }
 
 .header__container-text p{
