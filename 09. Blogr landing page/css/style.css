@@ -20,6 +20,7 @@
     --text-content:  hsl(207, 13%, 34%);
     --color-footer-background: hsl(240, 10%, 16%);
     --color--footer-text: hsl(240, 2%, 79%);
+    --color--hover-button: hsl(355, 100%, 74%);
 
 }
 
@@ -55,6 +56,12 @@ h4{
     color: var(--gradient-intro-dark);
     font-weight: 500;
 }
+
+.button:hover, .button--signUp:hover{
+    background-color: var(--color--hover-button);
+    color: white;
+}
+
 
 .flexbox-articles{
     display: flex;
@@ -127,6 +134,11 @@ header{
     font-weight: 500;
 }
 
+.login__container-menu a:last-child:hover{
+    background-color: var(--color--hover-button);
+    color: white;
+}
+
 .header__container-text{
     display: flex;
     flex-direction: column;
@@ -149,6 +161,12 @@ header{
     color: white;
     border: 1px solid white;
     margin-left: 5px;
+}
+
+.button--learnMore:hover{
+    background-color: white;
+    color: var(--color--hover-button);
+    border: none;
 }
 
 
@@ -278,3 +296,10 @@ header{
     text-decoration: none;
     color: var(--color--footer-text);
 }
+
+.subcategory__footer-menu a:hover{
+    text-decoration: underline;
+}
+
+/* STATUS
+SUBCATEGORY */
