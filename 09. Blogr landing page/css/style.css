@@ -94,6 +94,10 @@ header{
     /* justify-content: space-between; */
 }
 
+.submenu-login__container-menu {
+    visibility: visible;
+}
+
 .submenu-login__container-menu{
     margin-left: 50px;
     width: 100%;
@@ -419,7 +423,7 @@ header{
     }
 
     .submenu-login__container-menu{
-        /* display: none; */
+        visibility: hidden;
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -510,6 +514,10 @@ header{
 
     .button--start{
         padding: 10px 10px;
+    }
+
+    .visible{
+        visibility: visible;
     }
 }
 
