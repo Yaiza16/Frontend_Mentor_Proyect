@@ -1,5 +1,8 @@
 # Frontend Mentor - Fylo landing page with two column layout
 
+[Live Site URL](https://fylo-landing-yaiza.netlify.app/)
+[Solution URL](https://www.frontendmentor.io/solutions/fylo-landing-page-with-two-column-layout-LqxXeFblJ)
+
 ![Design preview for the Fylo landing page with two column layout challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
