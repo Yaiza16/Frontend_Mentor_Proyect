@@ -7,7 +7,6 @@
     font-size: 16px;
     font-family: 'Ubuntu', sans-serif;
     /* font-family: 'Overpass', sans-serif; */
-
 }
 
 :root{
@@ -29,6 +28,7 @@ h1{
     font-family: 'Overpass', sans-serif;
     font-weight: 600;
     color: #fff;
+    text-align: center;
 }
 
 h3{
@@ -72,6 +72,9 @@ h4{
     font-family: 'Overpass', sans-serif;
 }
 
+.mobile{
+    display: none;
+}
 
 /* HEADER */
 /* header menu */
@@ -87,6 +90,13 @@ header{
 }
 
 .container-menu{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.submenu-login__container-menu{
+    margin-left: 50px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -275,38 +285,45 @@ header{
     background-repeat: no-repeat;
     background-position: -55% 80%;
     border-radius: 0 100px 0 100px;
+    padding-left: 80px;
 
 }
 
 .container-itemsInfrastructure{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 420px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+}
+
+.container-images__itemsInfrastrucutre{
+    position: absolute;
+    top: -60px;
 }
 
 .articles__itemsInfrastructure{
     color: #fff;
-    padding: 0 150px 0 20px;
-   place-self: center start;
+    margin-left: 550px;
+    padding-right: 100px;
+    align-self: center;
+    height: 100%;
+}
+
+.article__itemsInfrastrucutre{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
 }
 
 .article__itemsInfrastrucutre h3{
-    text-align: start;
+    /* margin-top: 30px; */
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-.container-images__itemsInfrastrucutre{
-    margin-left: var(--pading-left-sections);
-    position: relative;
-}
-
-.container-images__itemsInfrastrucutre img{
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: -60px;
-    left: -35px;
+.article__itemsInfrastrucutre p{
+    flex-basis: auto;
 }
 
 /* tooling part */
@@ -378,5 +395,121 @@ header{
     text-decoration: underline;
 }
 
-/* STATUS
-SUBCATEGORY */
+
+
+/* -------- RESPONSIVE -------- */
+
+/* HEADER  */
+@media screen and (max-width: 1000px){
+    header{
+        padding: 50px 50px 100px;
+    }
+}
+
+@media screen and (max-width: 850px){
+    header{
+        padding: 50px 20px 80px;
+        height: auto;
+        position: relative;
+
+    }
+
+    .container-menu{
+        justify-content: space-between;
+    }
+
+    .submenu-login__container-menu{
+        /* display: none; */
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 10px;
+        width: auto;
+        justify-content: center;
+        margin-left: 0;
+        width: calc(100% - 50px);
+        top: 100px;
+    }
+
+    .menu__container-menu{
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .items__menu{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .item__menu{
+        width: 90%;
+    }
+    .menu__container-menu ul li .link__menu {
+        color: var(--headings-color);
+    }
+
+
+    .menu__container-menu ul ul{
+        margin-top: 20px;
+        position: relative;
+        display: none;
+        background: rgba(202, 202, 202, 0.603);
+        font-weight: 500;
+        border-bottom: 0;
+    }
+
+    .link__submenu{
+        color: rgb(85, 85, 85);
+    }
+
+    .item__menu:hover {
+        text-decoration: none;
+        color: rgb(85, 85, 85);
+    }
+
+    .item__menu:hover > .items__submenu {
+        box-shadow: none;
+    }
+    .item__menu img{
+        content: url(../images/icon-arrow-dark.svg);
+    }
+
+
+    .login__container-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        border-top: 1px solid rgba(128, 128, 128, 0.336);
+    }
+
+    .login__container-menu a {
+        color: var(--headings-color);
+    }
+
+    .login__container-menu a:last-child{
+        color: #fff;
+        background: linear-gradient(-90deg, var(--gradient-intro-dark), var(--gradient-intro-light));
+    }
+
+    .loginMobile__container-menu{
+        display: block;
+    }
+
+    .loginMobile__container-menu img{
+        cursor: pointer;
+    }
+
+    .header__container-text p{
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .button--start{
+        padding: 10px 10px;
+    }
+}
+
