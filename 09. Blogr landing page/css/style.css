@@ -521,3 +521,123 @@ header{
     }
 }
 
+/* DESIGN SECTION */
+
+@media screen and (max-width: 1000px){
+    .container-design-site{
+        padding: 100px 30px;
+        height: auto;
+    }
+
+    .container-design-site__padding{
+        justify-content: center;
+    }
+
+    .image__itemsDesign{
+        margin-top: 20px;
+        position: relative;
+        order: 2;
+        left: 0;
+        width: auto;
+        max-width: 500px;
+    }
+
+    .image__itemsDesign img{
+        width: 100%;
+    }
+
+    .articles__itemsDesign{
+        order: 3;
+        margin: 0;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+}
+
+/* Infrastructure SECTION  */
+@media screen and (max-width: 1000px){
+    .container-infrastructure-site{
+        height: auto;
+        background-position: 0% -100%;
+        background-size: contain;
+        padding: 0 50px;
+    }
+
+    .container-itemsInfrastructure{
+        flex-wrap: wrap;
+        height: auto;
+        gap: 0;
+    }
+
+    .container-images__itemsInfrastrucutre{
+        position: relative;
+        width: 90%;
+        top: -120px;
+    }
+
+    .container-images__itemsInfrastrucutre img{
+        width: 100%;
+    }
+
+    .articles__itemsInfrastructure {
+        margin-left: 0;
+        padding: 20px 20px 80px;
+        margin-top: -80px;
+    }
+}
+/* TOOLING PART */
+
+@media screen and (max-width: 1000px){
+    .container-tooling-site{
+        padding: 100px 30px;
+    }
+
+    .container-itemsTooling{
+        justify-content: center;
+
+    }
+    .articles__itemsTooling{
+        order: 2;
+        margin-top: 30px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .image__itemsTooling {
+        position: relative;
+        order: 1;
+        width: 90%;
+        right: auto;
+    }
+
+    .image__itemsTooling img {
+        content: url(../images/illustration-laptop-mobile.svg);
+        width: 100%;
+        
+    }
+}
+
+/* FOOTER */
+@media screen and (max-width: 1000px){
+    .container-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .footer-menu{
+        flex-direction: column;
+        margin-top: 40px;
+        align-items: center;
+        gap: 55px;
+    }
+
+    .category__footer-menu{
+        text-align: center;
+    }
+
+    .category__footer-menu li:first-child{
+        margin-top: 20px;
+    }
+}
