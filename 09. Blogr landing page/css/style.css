@@ -1,4 +1,3 @@
-/* DO ALL HEADER */
 
 *{
     margin: 0;
@@ -6,7 +5,6 @@
     box-sizing: border-box;
     font-size: 16px;
     font-family: 'Ubuntu', sans-serif;
-    /* font-family: 'Overpass', sans-serif; */
 }
 
 :root{
@@ -86,12 +84,10 @@ header{
     padding: 50px var(--pading-left-sections) 100px;
     border-radius: 0 0 0 100px;
     position: relative;
-    /* padding-bottom: 150px; */
 }
 
 .container-menu{
     display: flex;
-    /* justify-content: space-between; */
 }
 
 .submenu-login__container-menu {
@@ -215,10 +211,6 @@ header{
     justify-content: center;
     align-items: center;
     margin-top: 100px;
-    /* position: absolute;
-    top: 0;
-    left: 0;
-    right: 0; */
 }
 
 .header__container-text p{
@@ -284,7 +276,6 @@ header{
 
 .container-infrastructure-site{
     height: 420px;
-    /* padding: 100px var(--pading-left-sections); */
     background: url(../images/bg-pattern-circles.svg), linear-gradient(95deg, var(--gradient-background-body-dark),var(--gradient-background-body));
     background-repeat: no-repeat;
     background-position: -55% 80%;
@@ -321,7 +312,6 @@ header{
 }
 
 .article__itemsInfrastrucutre h3{
-    /* margin-top: 30px; */
     color: #fff;
     margin-bottom: 20px;
 }
@@ -335,10 +325,6 @@ header{
 .container-tooling-site{
     height: 1040px;
     padding: 150px 0 150px var(--pading-left-sections);
-    /* background-image: url(../images/illustration-laptop-desktop.svg);
-    background-origin:padding-box;
-    background-position: -50% 120px;
-    background-repeat: no-repeat; */
     padding-right: var(--pading-left-sections);
 }
 
