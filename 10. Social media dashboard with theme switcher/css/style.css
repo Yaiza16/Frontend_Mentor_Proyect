@@ -4,10 +4,17 @@
     --color-text-light: hsl(230, 17%, 14%);
     --color-text2-light: hsl(228, 12%, 44%);
 
+    --color-top-bg-dark: hsl(232, 19%, 15%);
+    --color-bg-dark: hsl(230, 17%, 14%);
+    --color-text-dark: hsl(0, 0%, 100%);
+    --color-text2-dark: hsl(228, 34%, 66%);
+
     --background-color-button-light: hsl(230, 22%, 74%);
+    --background-color-button-dark: linear-gradient(to right, #378fe6, #3eda82);
 
     --background-color-card-light: hsl(227, 47%, 96%);
-
+    --background-color-card-dark: hsl(228, 28%, 20%);
+    
     --green-color: hsl(163, 72%, 41%);
     --red-color: hsl(356, 69%, 56%);
 
@@ -15,6 +22,7 @@
     --border-twitter: hsl(203, 89%, 53%);
     --border-instagram: linear-gradient(to right, #fdc468, #df4996);
     --border-youtube: hsl(348, 97%, 39%);
+
 }
 
 *{
@@ -22,7 +30,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 14px;
-    font-family: 'Inter', sans-serif; 
+    font-family: 'Inter', sans-serif;
 }
 
 p{
@@ -30,21 +38,37 @@ p{
     font-weight: 700;
 }
 
+body.dark p{
+    color: var(--color-text2-dark);
+}
+
 body{
     background: linear-gradient(to top, var(--color-bg-light) 0%, var(--color-bg-light) 70%, var(--color-top-bg-light) 70%, var(--color-top-bg-light) 100%);
     padding: 30px 150px 40px;
+}
+
+body.dark{
+    background: linear-gradient(to top, var(--color-bg-dark) 0%, var(--color-bg-dark) 70%, var(--color-top-bg-dark) 70%, var(--color-top-bg-dark) 100%);
 }
 
 .card{
     background-color: var(--background-color-card-light);
 }
 
+body.dark .card{
+    background-color: var(--background-color-card-dark);
+} 
+
 .number{
     color: var(--color-text-light);
     font-weight: 700;
 }
 
-.statistics--up{
+body.dark .number{
+    color: var(--color-text-dark);
+}
+
+.statistics--up, body.dark .statistics--up{
     color: var(--green-color);
 }
 
@@ -53,8 +77,9 @@ body{
     padding-right: 5px;
 }
 
-.statistics--down{
+.statistics--down, body.dark .statistics--down{
     color: var(--red-color);
+
 }
 
 .statistics--down::before{
@@ -80,6 +105,10 @@ body{
     font-size: 1.8em;
 }
 
+body.dark .name__main-title{
+    color: var(--color-text-dark);
+}
+
 
 .button-container__first-part{
     display: flex;
@@ -103,6 +132,10 @@ body{
     outline: none;
 }
 
+body.dark button{
+    background: var(--background-color-button-dark);
+}
+
 .button::after{
     content: "";
     display: block;
@@ -116,6 +149,16 @@ body{
     left: unset;
     background-color: white;
     position: absolute;
+}
+
+body.dark .button::after{
+    background-color: var(--color-bg-dark);
+    border-color: var(--color-bg-dark);
+}
+
+body.dark .button::after{
+    left: 2px;
+    right: unset;
 }
 
 /* <---------- MAIN CARDS ----------> */
@@ -182,6 +225,10 @@ body{
     font-size: 1.5em;
     padding: 20px 0;
     color: var(--color-text2-light);
+}
+
+body.dark .title__second-part{
+    color: var(--color-text-dark);
 }
 
 .secundary-card-container{
