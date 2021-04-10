@@ -13,7 +13,11 @@
     --background-color-button-dark: linear-gradient(to right, #378fe6, #3eda82);
 
     --background-color-card-light: hsl(227, 47%, 96%);
+    --background-color-hover-card-light: hsl(232, 15%, 88%);
+
     --background-color-card-dark: hsl(228, 28%, 20%);
+    --background-color-hover-card-dark: hsl(229, 26%, 25%);
+
     
     --green-color: hsl(163, 72%, 41%);
     --red-color: hsl(356, 69%, 56%);
@@ -45,6 +49,7 @@ body.dark p{
 body{
     background: linear-gradient(to top, var(--color-bg-light) 0%, var(--color-bg-light) 70%, var(--color-top-bg-light) 70%, var(--color-top-bg-light) 100%);
     padding: 30px 150px 40px;
+    width: 100vw;
 }
 
 body.dark{
@@ -53,11 +58,20 @@ body.dark{
 
 .card{
     background-color: var(--background-color-card-light);
+    cursor: pointer;
+}
+
+.card:hover{
+    background-color: var(--background-color-hover-card-light);
 }
 
 body.dark .card{
     background-color: var(--background-color-card-dark);
 } 
+
+body.dark .card:hover{
+    background-color: var(--background-color-hover-card-dark);
+}
 
 .number{
     color: var(--color-text-light);
@@ -112,6 +126,7 @@ body.dark .name__main-title{
 
 .button-container__first-part{
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     
 }
@@ -132,8 +147,18 @@ body.dark .name__main-title{
     outline: none;
 }
 
+.button:hover{
+    background: var(--background-color-button-dark);
+}
+
+
+
 body.dark button{
     background: var(--background-color-button-dark);
+}
+
+body.dark .button:hover+.name-button{
+    color: var(--color-text-dark);
 }
 
 .button::after{
@@ -250,11 +275,69 @@ body.dark .title__second-part{
     font-size: 2.5em;
 }
 
-
 .image__secundary-card{
     justify-self: right;
 }
 
 .statistics__secundary-card{
     place-self: end end ;
+}
+
+
+ /* <---------- RESPONSIVE ----------> */
+
+ @media screen and (max-width: 1000px){
+    body{
+        background: linear-gradient(to top, var(--color-bg-light) 0%, var(--color-bg-light) 85%, var(--color-top-bg-light) 80%, var(--color-top-bg-light) 100%);
+
+    }
+
+    .main-card-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .secundary-card-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+
+    .secundary-card{
+        max-width: 300px;
+    }
+ }
+
+ @media screen and (max-width: 650px){
+    body{
+        padding: 25px;
+        background: linear-gradient(to top, var(--color-bg-light) 0%, var(--color-bg-light) 90%, var(--color-top-bg-light) 90%, var(--color-top-bg-light) 100%);
+    }
+
+    .header__first-part{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .button-container__first-part{
+        padding-top: 20px;
+        border-top: 1px solid var(--color-text2-light);
+        justify-content: space-between;
+    }
+
+    .main-card-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .secundary-card-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 25px;
+        justify-items: stretch;
+    }
+
+    .card{
+        max-width: unset;
+    }
+
 }
