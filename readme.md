@@ -14,5 +14,8 @@ Frontend coding challenges from [Frontend Mentor](https://www.frontendmentor.io)
 
 [06. Testimonials GRID section](https://www.frontendmentor.io/solutions/testimonials-grid-section-m75gAwq5M)   —   [Live Site URL](https://testimonials-section-yaiza.netlify.app/)
 
-
 [08. Fylo landing page with two column layout](https://www.frontendmentor.io/solutions/fylo-landing-page-with-two-column-layout-LqxXeFblJ)   —   [Live Site URL](https://fylo-landing-yaiza.netlify.app/)
+
+[09. Blogr landing page](https://www.frontendmentor.io/solutions/blogr-landing-page-p18AfGgNV)   —   [Live Site URL](https://blogr-landing-yaiza.netlify.app/)
+
+[10. Social media dashboard with theme switcher](https://www.frontendmentor.io/solutions/social-media-dashboard-with-theme-switcher-npJQGnnMQ)   —   [Live Site URL](https://dashboard-switcher-yaiza.netlify.app/)
