@@ -59,8 +59,7 @@ const galleryButton = () =>{
 
 
 burger.addEventListener('click', () =>{
-    navLinks.classList.toggle('navlinks-active');
-    header.classList.toggle('header-active');
-    nav.classList.toggle('nav-active');
+    header.classList.toggle('active');
+
 
 })

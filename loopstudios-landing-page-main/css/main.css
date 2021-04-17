@@ -267,66 +267,61 @@ body {
   }
 }
 @media screen and (max-width: 1000px) {
+  .header {
+    position: relative;
+    overflow-x: hidden;
+  }
+  .header::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in;
+  }
+}
+@media screen and (max-width: 1000px) {
   .section {
     padding-right: 6rem;
     padding-left: 6rem;
   }
 
   .header {
-    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+  }
+  .header::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in;
   }
 
   .nav {
     position: relative;
-    width: 100%;
-    overflow-x: hidden;
-  }
-  .nav::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 13vh;
-    background-color: black;
-    z-index: -10;
-    transform: translateX(100%);
-    transition: all 0.5s ease-in;
-    z-index: 5;
-  }
-
-  .nav-active::before {
-    transform: translateX(0%);
-    z-index: 5;
-  }
-
-  .logo {
-    padding-left: 6rem;
-    z-index: 10;
   }
 
   .nav-links {
+    position: absolute;
     flex-direction: column;
-    position: fixed;
     justify-content: center;
-    overflow-x: hidden;
+    gap: 3rem;
     top: 13vh;
-    width: 100%;
     height: 87vh;
+    width: 100vh;
     transform: translateX(100%);
     transition: all 0.5s ease-in;
-    background-color: black;
-  }
-  .nav-links li {
-    margin-left: 6rem;
-    padding: 1rem 0;
   }
 
   .nav-link {
-    font-family: "Josefin Sans", sans-serif;
-    opacity: 0;
-    transition: all 0.5s ease-in;
-    font-size: 1.5rem;
+    position: absolute;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.85);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.5rem;
   }
 
   .burger {
@@ -340,29 +335,48 @@ body {
     margin-bottom: 15px;
     position: relative;
     background-color: white;
+    transition: all 0.2s ease-in;
   }
   .burger__line::before {
     content: "";
     position: absolute;
     top: -8px;
+    transition: all 0.2s ease-in;
   }
   .burger__line::after {
     content: "";
     position: absolute;
     top: -16px;
+    transition: all 0.2s ease-in;
   }
 
-  .header-active {
-    padding: 0;
+  /* -------- Active ------- */
+  .active {
+    position: fixed;
+    top: 0;
+    z-index: 100;
   }
-
-  .navlinks-active {
+  .active::before {
     transform: translateX(0%);
   }
-  .navlinks-active li a {
-    opacity: 1;
+
+  .active .nav-links {
+    transform: translateX(0%);
   }
 
+  .active .burger__line, .active .burger__line::before, .active .burger__line::after {
+    transform: rotate(50deg);
+  }
+  .active .burger__line::before {
+    opacity: 0;
+    display: none;
+  }
+  .active .burger__line::after {
+    top: 0;
+    transform: rotate(80deg);
+  }
+
+  /* ------------------- */
   .title-site {
     margin-left: 6rem;
   }

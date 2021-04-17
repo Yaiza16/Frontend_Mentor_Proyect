@@ -2,6 +2,7 @@
 @forward 'burger';
 @use 'utilities' as u;
 @use 'responsive' as r;
+@use 'menu' as m;
 
 body{
     overflow-x: hidden;
@@ -270,6 +271,10 @@ body{
 
 @include u.media-q(1100px){
     @include r.media-xlg();
+}
+
+@include u.media-q(1000px){
+    @include m.media-menu();
 }
 
 @include u.media-q(1000px){
