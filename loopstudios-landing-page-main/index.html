@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+
+  
+  <title>Frontend Mentor | Loopstudios landing page</title>
+</head>
+<body>
+  <section class="section header" id="header">
+    <nav class="nav" id="nav">
+      <div class="logo" id="logo"> 
+        <img src="images/logo.svg" alt="logo" class="logo__img">
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a class="nav-link" href="">About</a></li>
+        <li><a class="nav-link" href="">Careers</a></li>
+        <li><a class="nav-link" href="">Events</a></li>
+        <li><a class="nav-link" href="">Products</a></li>
+        <li><a class="nav-link" href="">Support</a></li>
+      </ul>
+      <div class="burger" id="burger">
+        <div class="burger__line"></div>
+      </div>
+    </nav>
+
+    <h1 class="title-site">Immersive experiences that deliver</h1>
+  </section>
+
+  <section class="section interactive">
+    <div class="interactive-content">
+      <img src="images/desktop/image-interactive.jpg" alt="interactive-img" class="interactive-img">
+      <div class="interactive-text">
+        <h2 class="interactive-text__title">The leader in interactive VR</h2>
+        <p class="interactive-text__paragraph">Founded in 2011, Loopstudios has been producing world-class virtual reality 
+          projects for some of the best companies around the globe. Our award-winning 
+          creations have transformed businesses through digital experiences that bind 
+          to their brand.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section gallery" id="gallery-container">
+    <div class="gallery-header">
+      <h2 class="gallery-header__title">Our creations</h2>
+      <button class="gallery-header__button" id="gallery-button">See all</button>
+    </div>
+    
+    <div class="gallery-grid" id="gallery">
+      <!-- Contenido imágenes --- JS -->
+    </div>
+  </section>
+  <footer class="section footer">
+    <nav class="footer-nav">
+      <div class="footer-logo" id="logo"> 
+        <img src="images/logo.svg" alt="logo" class="footer-logo__img">
+      </div>
+      <ul class="footer-nav-links" id="footer-nav-links">
+        <li><a class="footer-nav-link" href="">About</a></li>
+        <li><a class="footer-nav-link" href="">Careers</a></li>
+        <li><a class="footer-nav-link" href="">Events</a></li>
+        <li><a class="footer-nav-link" href="">Products</a></li>
+        <li><a class="footer-nav-link" href="">Support</a></li>
+      </ul>
+      </nav>
+      <div class="footer-social">
+        <div class="footer-social__icons">
+          <img src="images/icon-facebook.svg" alt="icon-facebook">
+          <img src="images/icon-twitter.svg" alt="icon-twitter">
+          <img src="images/icon-pinterest.svg" alt="icon-pinterest">
+          <img src="images/icon-instagram.svg" alt="icon-instagram">
+        </div>
+        <p class="footer-social__copyright">© 2021 Loopstudios. All rights reserved.</p>
+      </div>
+  </footer>
+
+  <template id="template" class="template">
+    <div class="container-photo" id="container-photo">
+      <img src="" alt="photo" class="container-photo__img" id="container-photo__img">
+      <p class="container-photo__title" id="container-photo__title"></p>
+    </div>
+  </template>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

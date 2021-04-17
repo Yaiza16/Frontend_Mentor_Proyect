@@ -1,0 +1,289 @@
+@forward 'resets';
+@forward 'burger';
+@use 'utilities' as u;
+@use 'responsive' as r;
+
+body{
+    overflow-x: hidden;
+}
+
+.section{
+    padding: 0 8rem;
+}
+
+
+.header{
+    height: 650px;
+    max-height: 100vh;
+    background-image: url(../images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    transition: all .2s ease-in;
+}
+
+.nav{
+    height: u.$nav-height;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+.nav-links{
+    display: flex;
+    
+    
+    li{
+        margin: 0 1.5rem;
+
+    }
+}
+
+.nav-link{
+    text-decoration: none;
+    color: u.$white;
+    font-family: u.$main-font;
+    position: relative;
+
+    &:before{
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: calc(50% - 30%);
+        width: 0;
+        height: 2px;
+        color: u.$white;
+        background-color: u.$white;
+        transition: all .2s ease-in;
+        opacity: 0;
+        border-radius: 3px;
+
+    }
+
+    &:hover:before{
+        content: "";
+        width: 60%;
+        opacity: 1;
+    }
+
+}
+
+.title-site{
+    @include u.headings(u.$secundary-font, 4rem, 300);
+    width: 50%;
+    min-width: 500px;
+    padding: 2rem;
+    text-transform: uppercase;
+    color: u.$white;
+    border: 2px solid u.$white;
+    margin-top: 8rem;
+    margin-left: 1px;
+}
+
+
+/* ----------  Interactive section  ---------- */
+
+.interactive{
+    margin-top: 9rem;
+}
+
+.interactive-content{
+    position: relative;
+
+    & img{
+        width: 100%;
+    }
+}
+
+.interactive-text{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    background-color: u.$white;
+    padding: 5rem 0 0 5rem;
+
+    &__title{
+        @include u.headings(u.$secundary-font, 3.5rem, 400);
+        text-transform: uppercase;
+    }
+
+    &__paragraph{
+        font-family: u.$main-font;
+        line-height: 1.8rem;
+        margin-top: 2rem;
+        color: u.$dark-gray;
+    }
+}
+
+
+/* ----------  Gallery section  ---------- */
+.gallery{
+    margin-top: 9rem;
+}
+
+.gallery-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title{
+        @include u.headings(u.$secundary-font, 3rem, 400);
+        text-transform: uppercase;
+    }
+
+    &__button{
+        padding: .8rem 1.5rem;
+        text-align: center;
+        color: u.$black;
+        background-color: u.$white;
+        font-family: u.$secundary-font;
+        letter-spacing: .2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        outline: none;
+        border: 1px solid u.$black;
+        cursor: pointer;
+        transition: all .2s ease-in;
+
+        &:hover{
+            color: u.$white;
+            background-color: u.$black;
+        }
+
+    }
+}
+
+.gallery-grid{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.8rem;
+}
+
+.container-photo{
+    position: relative;
+
+    &:hover > &__img{
+        opacity: .3;
+    }
+
+    &:hover > &__title{
+        color: u.$black;
+    }
+
+
+    &__img{
+        position: relative;
+        filter: brightness(.8);
+        cursor: pointer;
+        width: 100%;     
+        transition: all .2s ease-in;
+  
+    }
+
+    &__title{
+        position: absolute;
+        bottom: 0;
+        @include u.headings(u.$secundary-font, 2.5rem, 300);
+        color: u.$white;
+        text-transform: uppercase;
+        padding: 2.5rem;
+        cursor: pointer;
+        transition: all .3s ease-in;
+    }
+}
+
+/* ----------  Footer section  ---------- */
+.footer{
+    margin-top: 7rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    background-color: u.$black;
+    color: u.$white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav-links{
+    display: flex;
+    margin-top: 1.5rem;
+
+}
+
+.footer-nav-link{
+    text-decoration: none;
+    color: u.$white;
+    margin-right: 2rem;
+    font-family: u.$main-font;
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: calc(50% - 30%);;
+        width: 0;
+        height: 2px;
+        color: u.$white;
+        background-color: u.$white;
+        transition: all .2s ease-in;
+        opacity: 0;
+        border-radius: 3px;
+    }
+
+    &:hover::before{
+        content: "";
+        width: 60%;
+        opacity: 1;
+    }
+}
+
+.footer-social{
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+
+    &__icons img{
+        margin-left: .6rem;
+        cursor: pointer;
+        position: relative;
+        padding-bottom: .75rem;
+        border-bottom: 2px solid rgba(255, 255, 255, 0);
+        transition: border-bottom .2s ease-in;
+
+        &:hover{
+            border-bottom: 2px solid u.$white;
+        }
+
+    }
+
+    &__copyright{
+        font-family: u.$main-font;
+        color: u.$dark-gray;
+    }
+}
+
+/* ----------  Responsive  ---------- */
+
+@include u.media-q(1100px){
+    @include r.media-xlg();
+}
+
+@include u.media-q(1000px){
+    @include r.media-lg();
+}
+
+@include u.media-q(700px){
+    @include r.media-md();
+}
+
+@include u.media-q(600px){
+    @include r.media-sm();
+}
+
+@include u.media-q(500px){
+    @include r.media-xsm();
+}

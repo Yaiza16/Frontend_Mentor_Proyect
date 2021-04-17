@@ -1,0 +1,342 @@
+@use 'utilities' as u;
+
+/* ---------- Responsive 1100px ---------- */
+@mixin media-xlg(){
+    .interactive-text__title{
+        font-size: 2.5rem;
+    }
+
+    .container-photo__title{
+        font-size: 1.8rem;
+        padding: 1.8rem;
+    }
+}
+
+
+/* ---------- Responsive 1000px ---------- */
+@mixin media-lg(){
+    .section{
+        padding-right: 6rem;
+        padding-left: 6rem;
+    }
+
+    .header{
+        padding: 0;
+    }
+
+    .nav{
+        // z-index: 99;
+        position: relative;
+        width: 100%;
+        overflow-x: hidden;
+
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 13vh;
+            background-color: u.$black;
+            z-index: -10;
+            transform: translateX(100%);
+            transition: all .5s ease-in;   
+            z-index: 5;
+         
+        }
+
+        // &-active::before{
+        //     transform: translateX(0%);
+        // }
+    }
+
+    .nav-active::before{
+        transform: translateX(0%);
+        z-index: 5;
+    }
+
+    .logo{
+        padding-left: 6rem;
+        z-index: 10;
+    }
+
+    .nav-links{
+        flex-direction: column;
+        position: fixed;
+        justify-content: center;
+        overflow-x: hidden;
+        top: 13vh;
+        // right: 0px;
+        width: 100%;
+        height: 87vh;
+        transform: translateX(100%);
+        transition: all .5s ease-in;
+        background-color: u.$black;
+        // z-index: 99;
+
+
+        // &.active{
+        //     transform: translateX(0%);
+
+        // }
+
+
+        li{
+            margin-left: 6rem;
+            padding: 1rem 0;
+
+            
+        }
+    }
+
+    .nav-link{
+        font-family: u.$secundary-font;
+        opacity: 0;
+        transition: all .5s ease-in;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: rgba(u.$white, .85);
+    }
+
+    .burger{
+        display: block;
+        padding-right: 6rem;
+        z-index: 10;
+
+
+
+        &__line{
+            width: 25px;
+            height: 3px;
+            margin-bottom: 15px;
+            position: relative;
+            background-color: u.$white;
+
+            &::before{
+                @extend .burger__line;
+                content: "";
+                position: absolute;
+                top: -8px;
+            }
+
+            &::after{
+                @extend .burger__line;
+                content: "";
+                position: absolute;
+                top: -16px;
+            }
+        }
+    }
+
+    .header-active{
+        padding: 0;
+    }
+
+    .navlinks-active{
+        transform: translateX(0%);
+
+        li{
+            a{
+                opacity: 1;
+            }
+        }
+    }
+
+    .title-site{
+        margin-left: 6rem;
+
+    }
+
+    .interactive-text{ 
+        padding: 2rem .2rem 0 2rem;
+        width: 90%;
+
+        &__title{
+            font-size: 2rem;
+        }
+
+        &__paragraph{
+            margin-top: 1.2rem;
+        }
+    }
+
+   .gallery-grid{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 3rem;
+   } 
+
+   .container-photo{
+
+    &__title{
+        font-size: 3rem;
+    }
+   }
+}
+
+
+
+/* ---------- Responsive 700px ---------- */
+@mixin media-md(){
+    .section{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    // Header
+
+    .header{
+        padding: 0;
+        background-image: url(../images/mobile/image-hero.jpg);
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .logo{
+        padding-left: 3rem;
+    }
+    .burger{
+        padding-right: 3rem;
+    }
+
+    .title-site{
+        width: auto;
+        min-width: unset;
+        margin-left: 3rem;
+        margin-right: 3rem;
+
+    }
+
+    // Interactive
+
+    .interactive-text{
+        position: static;
+        text-align: center;
+
+        &__title{
+            font-size: 3rem;
+        }
+    }
+
+    // Gallery
+    .gallery-header{
+        justify-content: center;
+
+        &__button{
+            display: none;
+        }
+    }
+
+    .gallery{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery-grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-small{
+        padding: .8rem 1.5rem;
+        text-align: center;
+        color: u.$black;
+        background-color: u.$white;
+        font-family: u.$secundary-font;
+        letter-spacing: .4rem;
+        font-size: 1.5rem;
+        font-family: u.$main-font;
+        text-transform: uppercase;
+        outline: none;
+        border: 1px solid u.$black;
+        cursor: pointer;
+        transition: all .2s ease-in;
+        margin-top: 2.5rem;
+
+        &:hover{
+            color: u.$white;
+            background-color: u.$black;
+        }
+    }
+
+    // Footer
+    .footer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav-links{
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .footer-nav-link{
+        margin-right: 0;
+    }
+
+    .footer-social{
+        text-align: center;
+        margin-top: 3rem;
+    }
+}
+
+
+/* ---------- Responsive 600px ---------- */
+
+@mixin media-sm{
+    .section{
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+    .header{
+        padding: 0;
+    }
+
+    .title-site{
+        font-size: 3rem;
+    }
+
+    
+}
+
+
+/* ---------- Responsive 500px ---------- */
+@mixin media-xsm{
+    .title-site{
+        font-size: 2.5rem;
+    }
+
+    .interactive-text{
+        padding: 1rem;
+        width: 100%;
+
+        &__title{
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+
+    .gallery{
+        margin-top: 5rem;
+    }
+
+    .gallery-header{
+        
+        &__title{
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+
+    .gallery-grid{
+        margin-top: 3rem;
+    }
+
+    .container-photo{
+
+        &__title{
+            font-size: 1.7rem;
+            width: 60%;
+        }
+    }
+}
