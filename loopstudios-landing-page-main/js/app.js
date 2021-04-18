@@ -55,9 +55,6 @@ const galleryButton = () =>{
     galleryContainer.appendChild(clone);
 }
 
-
-
-
 burger.addEventListener('click', () =>{
     header.classList.toggle('active');
 

@@ -325,9 +325,11 @@ body {
   }
 
   .burger {
+    cursor: pointer;
     display: block;
     padding-right: 6rem;
     z-index: 10;
+    padding-top: 20px;
   }
   .burger__line, .burger__line::after, .burger__line::before {
     width: 25px;

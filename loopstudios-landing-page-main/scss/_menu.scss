@@ -1,0 +1,20 @@
+@use 'utilities' as u;
+
+@mixin media-menu{
+    .header{
+        position: relative;
+        overflow-x: hidden;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background-color: u.$black;
+            transform: translateX(100%);
+            transition: all .5s ease-in;   
+        }
+    }
+    
+    
+}
