@@ -10,7 +10,13 @@ const button = document.querySelector('#gallery-button');
 
 document.addEventListener('DOMContentLoaded', () =>{
     fetchData();
+
+    window.addEventListener('resize', () =>{
+        fetchData();
+    }, true)
 })
+
+
 
 
 const fetchData = async () => {
