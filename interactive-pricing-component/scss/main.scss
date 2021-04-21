@@ -19,6 +19,7 @@
     justify-content: space-between;
     overflow-x: hidden;
     gap: 7rem;
+    text-align: center;
 
 
     &::before{
@@ -27,6 +28,14 @@
         left: 0;
         top: 0;
         z-index: -1; 
+    }
+
+    @include m.md(){
+        height: auto;
+    }
+
+    @include m.sm(){
+        padding: 6rem 4rem;
     }
 }
 
@@ -41,12 +50,24 @@
         right: 40%;
         top: -80%;
     }
+
+    @include m.md(){
+        font-size: 1.5rem;
+        
+        &::before{
+            right: 25%
+        }
+    }
 }
 
 .subtitle-site{
     @include m.regular-font(1.1rem);
     color: v.$grayish-blue;
     margin-top: .5rem;
+
+    @include m.md(){
+        font-size: .9rem
+    }
 }
 
 
@@ -58,9 +79,22 @@
     background-color: v.$white;
     @include m.flex-column-center();
     width: 50vw;
+    min-width: 500px;
     max-width: 40rem;
     border-radius: 1rem;
     box-shadow: 1px 1px 30px 5px rgba(0, 0, 0, .1);
+
+
+    @include m.md(){
+        width: 475px;
+        min-width: unset;
+    }
+
+    @include m.sm(){
+        margin-top: 3rem;
+        width: 90%;
+        min-width: 330px;
+    }
 }
 
 .interactive-card{
@@ -70,7 +104,15 @@
 }
 
 .resume-card{
-    @include m.flex-row-between-center();
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @include m.md(){
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .pageviews{
@@ -113,6 +155,11 @@
         text-transform: none;
 
     }
+
+    @include m.md(){
+        order: 3;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .billing{
@@ -124,12 +171,19 @@
 }
 
 .discount{
+    display: inline;
     background-color: v.$light-grayish-red;
     color: v.$light-red;
     border-radius: 1rem;
     margin-left: .7rem;
     padding: .2rem .5rem;
     font-size: .8rem;
+
+    @include m.md(){
+        &__mobile{
+            display: none;
+        }
+    }
 }
 
 .feature-card{
@@ -137,6 +191,14 @@
     width: 100%;
     @include m.flex-row-between-center();
     border-top: 1px solid v.$lightest-grayish-blue;
+
+    @include m.md(){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem
+    }
+
 }
 
 .features{
@@ -158,5 +220,10 @@
             left: -1rem;
         }
     }
+}
 
+@include m.sm(){
+    *{
+        font-size: 12px;
+    }
 }

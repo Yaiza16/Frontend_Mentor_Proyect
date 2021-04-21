@@ -17,6 +17,11 @@
   margin-bottom: 3rem;
   position: relative;
 }
+@media only screen and (max-width: 700px) {
+  .input-container {
+    order: 2;
+  }
+}
 
 .slider {
   appearance: none;
@@ -137,6 +142,7 @@
   justify-content: space-between;
   overflow-x: hidden;
   gap: 7rem;
+  text-align: center;
 }
 .site::before {
   content: url(../images/bg-pattern.svg);
@@ -144,6 +150,16 @@
   left: 0;
   top: 0;
   z-index: -1;
+}
+@media only screen and (max-width: 700px) {
+  .site {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .site {
+    padding: 6rem 4rem;
+  }
 }
 
 .title-site {
@@ -159,6 +175,14 @@
   right: 40%;
   top: -80%;
 }
+@media only screen and (max-width: 700px) {
+  .title-site {
+    font-size: 1.5rem;
+  }
+  .title-site::before {
+    right: 25%;
+  }
+}
 
 .subtitle-site {
   font-family: "Manrope", sans-serif;
@@ -166,6 +190,11 @@
   font-size: 1.1rem;
   color: #858fad;
   margin-top: 0.5rem;
+}
+@media only screen and (max-width: 700px) {
+  .subtitle-site {
+    font-size: 0.9rem;
+  }
 }
 
 /* <---------- Card ----------> */
@@ -175,9 +204,23 @@
   flex-direction: column;
   align-items: center;
   width: 50vw;
+  min-width: 500px;
   max-width: 40rem;
   border-radius: 1rem;
   box-shadow: 1px 1px 30px 5px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (max-width: 700px) {
+  .card {
+    width: 475px;
+    min-width: unset;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .card {
+    margin-top: 3rem;
+    width: 90%;
+    min-width: 330px;
+  }
 }
 
 .interactive-card {
@@ -188,8 +231,15 @@
 
 .resume-card {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (max-width: 700px) {
+  .resume-card {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .pageviews, .cost__duration {
@@ -229,6 +279,12 @@
 .cost__duration {
   text-transform: none;
 }
+@media only screen and (max-width: 700px) {
+  .cost {
+    order: 3;
+    margin-bottom: 1.5rem;
+  }
+}
 
 .billing {
   display: flex;
@@ -241,12 +297,18 @@
 }
 
 .discount {
+  display: inline;
   background-color: #feece7;
   color: #ff8c66;
   border-radius: 1rem;
   margin-left: 0.7rem;
   padding: 0.2rem 0.5rem;
   font-size: 0.8rem;
+}
+@media only screen and (max-width: 700px) {
+  .discount__mobile {
+    display: none;
+  }
 }
 
 .feature-card {
@@ -256,6 +318,14 @@
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid #eaeefb;
+}
+@media only screen and (max-width: 700px) {
+  .feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
 }
 
 .features {
@@ -276,6 +346,12 @@
   content: url(../images/icon-check.svg);
   position: absolute;
   left: -1rem;
+}
+
+@media only screen and (max-width: 500px) {
+  * {
+    font-size: 12px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

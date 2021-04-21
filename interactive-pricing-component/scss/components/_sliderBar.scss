@@ -9,6 +9,10 @@
     width: 100%;
     @include m.margin-top-bottom(3rem, 3rem);
     position: relative;
+
+    @include m.md(){
+        order: 2;
+    }
 }
 
 

@@ -33,3 +33,16 @@
     margin-left: $margin;
     margin-right: $margin;
 }
+
+@mixin md {
+    @media only screen and (max-width: 700px) {
+      @content;
+    }
+  }
+
+
+@mixin sm {
+  @media only screen and (max-width: 500px) {
+    @content;
+  }
+}

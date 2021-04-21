@@ -23,17 +23,18 @@
           <div class="cost">
             <p class="cost__amount" id="cost-amount">8.00</p>
             <p class="cost__duration" id="cost-duration">/ month</p>
+          </div>
+          <div class="input-container">
+            <span class="bar"><span class="fill"></span></span>
+            <input name="slider" type="range" min="1" max="5" value="3" step="1" id="slider" class="slider">
         </div>
         </div>
-        <div class="input-container">
-          <span class="bar"><span class="fill"></span></span>
-          <input name="slider" type="range" min="1" max="5" value="3" step="1" id="slider" class="slider">
-      </div>
+        
       <div class="billing">
         <p class="monthly-billing">Monthly Billing</p>
         <button class="toggle-billing" id="toggle-billing"></button>
         <p class="yearly-billing">Yearly Billing</p>
-        <p class="discount" id="discount">25% discount</p>
+        <p class="discount" id="discount">-25% <span class="discount__mobile">discount</span></p>
       </div>
 
       </div>
