@@ -1,8 +1,8 @@
-let optionsMonthly = [{id: 1, cost: 3, pageviews: 20, yearly: false},
-    {id: 2, cost: 6, pageviews: 60, yearly: false},
-    {id: 3, cost: 8, pageviews: 100, yearly: false},
-    {id: 4, cost: 14, pageviews: 200, yearly: false},
-    {id: 5, cost: 25, pageviews: 500, yearly: false}];
+let optionsMonthly = [{id: 1, cost: 3, pageviews: 10, yearly: false},
+    {id: 2, cost: 12, pageviews: 50, yearly: false},
+    {id: 3, cost: 16, pageviews: 100, yearly: false},
+    {id: 4, cost: 24, pageviews: 500, yearly: false},
+    {id: 5, cost: 36, pageviews: 1000, yearly: false}];
 
 let monthly = true;
 
@@ -28,7 +28,7 @@ const setValuesSlider = () =>{
                     costAmount.innerHTML = option.cost.toFixed(2)
                     sliderBackground(option)
                 }else{
-                    costAmount.innerHTML = ((option.cost*12/4*3).toFixed(2))
+                    costAmount.innerHTML = ((option.cost/4*3).toFixed(2))
                     sliderBackground(option)
                 }
                 
@@ -48,19 +48,16 @@ const toggleBilling = () => {
     toggle.addEventListener('click', () =>{
         if (monthly){
             toggle.classList.add('yearly')
-            costDuration.innerHTML = 'yearly'
             optionsMonthly.forEach(option =>{
                 if(slider.value == option.id){
                     console.log(option.id)
-                    costAmount.innerHTML = ((option.cost*12/4*3).toFixed(2))
+                    costAmount.innerHTML = ((option.cost/4*3).toFixed(2))
                     pageviews.innerHTML = option.pageviews
                 }
                 monthly = false
             })
         }else{
             toggle.classList.remove('yearly')
-
-            costDuration.innerHTML = '/ month'
             optionsMonthly.forEach(option =>{
                 if(slider.value == option.id){
                     console.log(option.id)
