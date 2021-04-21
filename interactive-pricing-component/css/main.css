@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- COLORS --------- */
+/* <---------- FONTS ----------> */
+/* <---------- OTHERS ----------> */
+:root {
+  --with-slider: 50%;
+}
+
+.input-container {
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.slider {
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  background: #eaeefb;
+  border-radius: 1rem;
+  outline: none;
+  z-index: 2;
+  position: relative;
+}
+.slider::before {
+  content: "";
+  position: absolute;
+  width: var(--with-slider);
+  height: 100%;
+  border-radius: 1rem;
+  background-color: #a5f3eb;
+  z-index: 0;
+}
+.slider::-webkit-slider-thumb {
+  position: relative;
+  appearance: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-image: url(../../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #10d5c2;
+  border-radius: 50%;
+  box-shadow: 0px 10px 30px 5px rgba(16, 213, 194, 0.6);
+  cursor: grab;
+  z-index: 5;
+}
+.slider::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  filter: contrast(0.7);
+}
+
+.toggle-billing {
+  width: 3rem;
+  border-radius: 1.3rem;
+  height: 1.7rem;
+  border: none;
+  outline: none;
+  background: #cdd7ee;
+  position: relative;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.toggle-billing::before {
+  content: "";
+  position: absolute;
+  background: white;
+  top: 0;
+  left: 0;
+  margin: 0.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.toggle-billing:hover {
+  background-color: #a5f3eb;
+}
+.toggle-billing.yearly {
+  position: relative;
+  background: #293356;
+}
+.toggle-billing.yearly::before {
+  content: "";
+  position: absolute;
+  background: white;
+  top: 0;
+  left: unset;
+  right: 0;
+  margin: 0.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.toggle-billing.yearly:hover {
+  background-color: #a5f3eb;
+}
+
+.start-trial {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #bdccff;
+  background-color: #293356;
+  border: none;
+  outline: none;
+  padding: 0.8rem 3.5rem;
+  border-radius: 2rem;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+.start-trial:hover {
+  color: white;
+}
+
+/* <---------- Header site ----------> */
+.site {
+  background-color: #fafbff;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: hidden;
+  gap: 7rem;
+}
+.site::before {
+  content: url(../images/bg-pattern.svg);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.title-site {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 2.125rem;
+  color: #293356;
+  position: relative;
+}
+.title-site::before {
+  content: url(../images/pattern-circles.svg);
+  position: absolute;
+  right: 40%;
+  top: -80%;
+}
+
+.subtitle-site {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #858fad;
+  margin-top: 0.5rem;
+}
+
+/* <---------- Card ----------> */
+.card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+  max-width: 40rem;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 30px 5px rgba(0, 0, 0, 0.1);
+}
+
+.interactive-card {
+  padding: 2.5rem;
+  align-self: stretch;
+  text-align: center;
+}
+
+.resume-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pageviews, .cost__duration {
+  text-transform: uppercase;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: #858fad;
+  letter-spacing: 0.1rem;
+  position: relative;
+}
+.pageviews .pageviews__quantity, .cost__duration .pageviews__quantity {
+  margin-right: 1rem;
+}
+.pageviews .pageviews__quantity::after, .cost__duration .pageviews__quantity::after {
+  content: "k";
+  position: absolute;
+}
+
+.cost {
+  display: flex;
+  gap: 0.125rem;
+  align-items: center;
+}
+.cost__amount {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+  color: #293356;
+  position: relative;
+}
+.cost__amount::before {
+  content: "$";
+  position: absolute;
+  left: -2.2rem;
+}
+.cost__duration {
+  text-transform: none;
+}
+
+.billing {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #858fad;
+}
+
+.discount {
+  background-color: #feece7;
+  color: #ff8c66;
+  border-radius: 1rem;
+  margin-left: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+}
+
+.feature-card {
+  padding: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eaeefb;
+}
+
+.features {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #858fad;
+}
+.features__item {
+  position: relative;
+  margin-left: 1rem;
+  font-size: 0.8rem;
+}
+.features__item:not(last-child) {
+  margin-bottom: 1rem;
+}
+.features__item::before {
+  content: url(../images/icon-check.svg);
+  position: absolute;
+  left: -1rem;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+</head>
+<body>
+  <section class="site">
+    <div class="header-site">
+      <h1 class="title-site">Simple, traffic-based pricing</h1>
+      <p class="subtitle-site">  Sign-up for our 30-day trial. No credit card required.</p>
+    </div>
+    <div class="card">
+      <div class="interactive-card">
+        <div class="resume-card">
+          <h2 class="pageviews"><span class="pageviews__quantity" id="pageviews">100</span> pageviews</h2>
+          <div class="cost">
+            <p class="cost__amount" id="cost-amount">8.00</p>
+            <p class="cost__duration" id="cost-duration">/ month</p>
+        </div>
+        </div>
+        <div class="input-container">
+          <span class="bar"><span class="fill"></span></span>
+          <input name="slider" type="range" min="1" max="5" value="3" step="1" id="slider" class="slider">
+      </div>
+      <div class="billing">
+        <p class="monthly-billing">Monthly Billing</p>
+        <button class="toggle-billing" id="toggle-billing"></button>
+        <p class="yearly-billing">Yearly Billing</p>
+        <p class="discount" id="discount">25% discount</p>
+      </div>
+
+      </div>
+      <div class="feature-card">
+        <div class="features">
+          <p class="features__item">Unlimited websites</p>
+          <p class="features__item">100% data ownership</p>
+          <p class="features__item">Email reports</p>
+        </div>
+        <button class="start-trial">Start my trial</button>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

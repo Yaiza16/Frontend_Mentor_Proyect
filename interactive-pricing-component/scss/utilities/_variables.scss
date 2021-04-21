@@ -1,0 +1,25 @@
+/* ---------- COLORS --------- */
+// Primary colors
+$soft-cyan: rgb(165, 243, 235); // Full Slider Bar
+$strong-cyan: rgb(16, 213, 194); // Slider Backround 
+$light-grayish-red: rgb(254, 236, 231); // Discount Background
+$light-red: rgb(255, 140, 102); // Discount Text
+$pale-blue: hsl(226, 100%, 87%); // CTA Text
+
+
+// Secondary colors
+$white: hsl(0, 0%, 100%); // Pricing Component Background
+$very-pale-blue: hsl(230, 100%, 99%); // Main Background
+$lightest-grayish-blue: hsl(224, 65%, 95%); // Empty Slider Bar
+$light-grayish-blue: hsl(223, 50%, 87%); // Toggle Background
+$grayish-blue: hsl(225, 20%, 60%); // Text
+$dark-desaturated-blue: hsl(227, 35%, 25%); // Text & CTA Background
+
+
+/* <---------- FONTS ----------> */
+$main-font: 'Manrope', sans-serif;
+
+
+/* <---------- OTHERS ----------> */
+$padding-sections-card: 2.5rem;
+$transition: all .2s ease-out;

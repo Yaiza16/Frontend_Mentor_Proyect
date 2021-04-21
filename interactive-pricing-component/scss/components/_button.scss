@@ -1,0 +1,18 @@
+@use '../utilities/mixins' as m;
+@use '../utilities/variables' as v;
+
+.start-trial{
+    @include m.regular-font(1rem);
+    color: v.$pale-blue;
+    background-color: v.$dark-desaturated-blue;
+    border: none;
+    outline: none;
+    padding: .8rem 3.5rem;
+    border-radius: 2rem;
+    transition: v.$transition;
+    cursor: pointer;
+
+    &:hover{
+        color: v.$white;
+    }
+}

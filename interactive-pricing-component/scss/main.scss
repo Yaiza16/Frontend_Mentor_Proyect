@@ -1,0 +1,162 @@
+@forward 'base/resets';
+@forward 'components/sliderBar';
+@forward 'components/toggle';
+@forward 'components/button';
+@use 'utilities/variables' as v;
+@use 'utilities/mixins' as m;
+
+
+/* <---------- Header site ----------> */
+.site{
+    background-color: v.$very-pale-blue;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    @include m.flex-column-center();
+    justify-content: space-between;
+    overflow-x: hidden;
+    gap: 7rem;
+
+
+    &::before{
+        content: url(../images/bg-pattern.svg);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1; 
+    }
+}
+
+.title-site{
+    @include m.bold-font(2.125rem);
+    color: v.$dark-desaturated-blue;
+    position: relative;
+
+    &::before{
+        content: url(../images/pattern-circles.svg);
+        position: absolute;
+        right: 40%;
+        top: -80%;
+    }
+}
+
+.subtitle-site{
+    @include m.regular-font(1.1rem);
+    color: v.$grayish-blue;
+    margin-top: .5rem;
+}
+
+
+
+
+
+/* <---------- Card ----------> */
+.card{
+    background-color: v.$white;
+    @include m.flex-column-center();
+    width: 50vw;
+    max-width: 40rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 30px 5px rgba(0, 0, 0, .1);
+}
+
+.interactive-card{
+    padding: v.$padding-sections-card;
+    align-self: stretch;
+    text-align: center;
+}
+
+.resume-card{
+    @include m.flex-row-between-center();
+}
+
+.pageviews{
+    text-transform: uppercase;
+    @include m.bold-font(1rem);
+    color: v.$grayish-blue;
+    letter-spacing: .1rem;
+    position: relative;
+
+    .pageviews__quantity{
+        margin-right: 1rem;
+
+        &::after{
+            content:'k';
+            position: absolute;
+        }
+    }  
+}
+
+
+.cost{
+    display: flex;
+    gap: .125rem;
+    align-items: center;
+
+    &__amount{
+        @include m.bold-font(3rem);
+        color: v.$dark-desaturated-blue;
+        position: relative;
+
+        &::before{
+            content: "$";
+            position: absolute;
+            left: -2.2rem;
+        }
+    }
+
+    &__duration{
+        @extend .pageviews;
+        text-transform: none;
+
+    }
+}
+
+.billing{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @include m.regular-font(15px);
+    color: v.$grayish-blue;
+}
+
+.discount{
+    background-color: v.$light-grayish-red;
+    color: v.$light-red;
+    border-radius: 1rem;
+    margin-left: .7rem;
+    padding: .2rem .5rem;
+    font-size: .8rem;
+}
+
+.feature-card{
+    padding: v.$padding-sections-card;
+    width: 100%;
+    @include m.flex-row-between-center();
+    border-top: 1px solid v.$lightest-grayish-blue;
+}
+
+.features{
+    @include m.regular-font(1rem);
+    color: v.$grayish-blue;
+
+    &__item{
+        position: relative;
+        margin-left: 1rem;
+        font-size: .8rem;
+
+        &:not(last-child){
+            margin-bottom: 1rem;
+        }
+
+        &::before{
+            content: url(../images/icon-check.svg);
+            position: absolute;
+            left: -1rem;
+        }
+    }
+
+}
