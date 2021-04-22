@@ -1,0 +1,149 @@
+@forward 'base/globals';
+@forward 'base/resets' ;
+@forward 'components/toggle';
+@forward 'components/button';
+@use 'utilities/variables' as v;
+@use 'utilities/mixins' as m;
+
+
+
+body{
+    padding: 3rem;
+    background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: top right, bottom left;
+    background-color: v.$very-light-grayish-blue;
+
+    @include m.mq('medium'){
+        background-image: url(../images/bg-top.svg);
+        background-repeat: no-repeat;
+        background-position: 180% -20%; 
+    }
+}
+
+/* ----- Header ----- */
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-site{
+    margin-bottom: 2rem;
+
+    @include m.mq('medium'){
+        font-size: 2rem;
+    }
+}
+
+.toggle-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.toggle-option{
+    color: v.$light-grayish-blue;
+}
+
+.cards{
+    margin-top: 4rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(max-content, 22rem));
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @include m.mq('medium'){
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+// }
+}
+.card{
+    height: 100%;
+    min-width: 15rem;
+    height: auto;
+    background: v.$white;
+    padding: 1rem;
+    border-radius: .5rem;
+
+    @include m.mq('large'){
+        min-width: 13rem;
+    }
+
+    @include m.mq('medium'){
+        min-width: 17rem;
+    }
+
+}
+
+.card--highlight{
+    background: linear-gradient(v.$linear-gradient-card);
+    padding-top: 10%;
+    padding-bottom: 10%;
+    box-shadow: 1px 1px 30px rgba(black, .3);
+
+    @include m.mq('medium'){
+        padding: 1rem;
+    }
+
+    & .price{
+        color: v.$white;
+    }
+
+    & p{
+        color: v.$white;
+    }
+};
+
+.dollar{
+    font-size: 2rem;
+};
+
+.price{
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: v.$dark-grayish-blue;
+
+    &.no-active{
+        display: none;
+    }
+
+    @include m.mq('large'){
+        font-size: 2.5rem
+    }
+
+    @include m.mq('medium'){
+        font-size: 4rem
+    }
+};
+
+
+.features{
+    margin-bottom: 1rem;
+
+    &__item{
+        padding: 1rem 0;
+        border-top: 1px solid v.$light-grayish-blue;
+    
+        &:nth-last-child(1){
+            border-bottom: 1px solid v.$light-grayish-blue;
+        } 
+
+        @include m.mq('large'){
+            font-size: .8rem;
+        }
+
+        @include m.mq('medium'){
+            font-size: 1rem;
+        }   
+    }
+}
+

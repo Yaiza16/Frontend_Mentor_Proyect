@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="css/main.css">
+  <title>Frontend Mentor | [Pricing component with toggle ]</title>
+
+</head>
+<body>
+  <header class="header">
+    <h1 class="title-site">Our Pricing</h1>
+    <div class="toggle-container">
+      <p class="toggle-option">Annually</p>
+      <button class="toggle" id="toggle"></button>
+      <p class="toggle-option">Monthly</p>
+    </div>
+  </header>
+
+  <section class="cards">
+    <div class="card">
+      <p class="rate">Basic</p>
+      <h3 class="price"><span class="dollar">&dollar;</span>19.99</h3>
+      <h3 class="price no-active"><span class="dollar">&dollar;</span>199.99</h3>
+      <div class="features">
+        <p class="features__item">500 GB Storage</p>
+        <p class="features__item">2 Users Allowed</p>
+        <p class="features__item">Send up to 3 GB</p>
+      </div>
+      <div class="button">Learn More</div>
+    </div>
+    <div class="card card--highlight">
+      <p class="rate">Professional</p>
+      <h3 class="price"><span class="dollar">&dollar;</span><span>24.99</h3>
+      <h3 class="price no-active"><span class="dollar">&dollar;</span>249.99</h3>
+      <div class="features">
+        <p class="features__item">1 TB Storage</p>
+        <p class="features__item">5 Users Allowed</p>
+        <p class="features__item">Send up to 10 GB</p>
+      </div>
+      <div class="button button--highlight">Learn More</div>
+    </div>
+    <div class="card">
+      <p class="rate">Master</p>
+      <h3 class="price"><span class="dollar">&dollar;</span>39.99</h3>
+      <h3 class="price no-active"><span class="dollar">&dollar;</span>399.99</h3>
+      <div class="features">
+        <p class="features__item">2 TB Storage</p>
+        <p class="features__item">10 Users Allowed</p>
+        <p class="features__item">Send up to 20 GB</p>
+      </div>
+      <div class="button">Learn More</div>
+    </div>
+  </section>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>

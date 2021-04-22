@@ -1,0 +1,32 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+.button{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(v.$linear-gradient);
+    padding: .8rem;
+    border: 1px solid v.$white;
+    color: v.$white;
+    border-radius: .3rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include m.transition;
+
+    &:hover{
+        background: transparent;
+        border: 1px solid v.$grayish-blue;
+        color: v.$button-letters-hover;
+    }
+}
+
+.button--highlight{
+    background: v.$white;
+    color: v.$grayish-blue;
+
+    &:hover{
+        background: transparent;
+        border: 1px solid v.$white;
+        color: v.$white;
+    }
+}

@@ -1,0 +1,46 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+
+.toggle{
+    position: relative;
+    background: linear-gradient( v.$linear-gradient);
+    width: 2.5rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    @include m.transition;
+
+    &:hover{
+        opacity: .5;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        height: 1.1rem;
+        width: 1.1rem;
+        margin: .2rem;
+        background: v.$white;
+        border-radius: 50%;
+        top: 0;
+        right: 0;   
+    }
+
+    &.annually{
+
+        &::before{
+            content: "";
+            position: absolute;
+            height: 1.1rem;
+            width: 1.1rem;
+            margin: .2rem;
+            background: v.$white;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+        }
+    }
+}

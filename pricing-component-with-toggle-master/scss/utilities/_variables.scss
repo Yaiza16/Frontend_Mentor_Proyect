@@ -1,0 +1,23 @@
+/* ---------- Colors ---------- */
+// Primary color
+$linear-gradient: (90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+$linear-gradient-card: (135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+$button-letters-hover: hsl(237, 63%, 64%);
+
+// Neutral colors
+$very-light-grayish-blue: hsl(240, 78%, 98%);
+$light-grayish-blue: hsl(234, 14%, 74%);
+$grayish-blue: hsl(233, 13%, 49%);
+$dark-grayish-blue: hsl(232, 13%, 33%);
+$white: #fff;
+
+//Fonts
+$body-font-size: 15px;
+$font-family: 'Montserrat', sans-serif;
+
+
+// Media query
+$media-query: (
+    'large': 57em,
+    'medium': 44em
+);

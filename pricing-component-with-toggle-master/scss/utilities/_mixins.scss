@@ -1,0 +1,13 @@
+@use 'variables' as v;
+
+@mixin transition{
+    transition: all .3s ease;
+}
+
+@mixin mq($key){
+    $size: map-get(v.$media-query, $key);
+
+    @media only screen and (max-width: $size){
+        @content;
+    }
+}
