@@ -9,8 +9,8 @@ Thanks for checking out this front-end coding challenge.
 [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
 ## Result
-- Solution URL: [Frontendmentor]()
-- Live Site URL: [Interactive pricing component]()
+- Solution URL: [Frontendmentor](https://www.frontendmentor.io/solutions/pricing-component-with-toggle-master-bem-sass-and-js-8ng_w9ETG)
+- Live Site URL: [Interactive pricing component](https://pricing-component-toggle-yaiza.netlify.app/)
 
 ## The challenge
 
