@@ -1,0 +1,80 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+@use '../utilities/functions' as f;
+
+.resume-section{
+    margin-top: -6rem;
+    padding:v.$padding-sections;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+}
+
+.resume-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include m.card-feature;
+    position: relative;
+
+    &::before{
+        content: url(/images/logo-mastercraft.svg);
+        position: absolute;
+        top: -(f.calculateRem(59/2));
+        right: 0;
+        left: 0;
+    }
+}
+
+.resume-subtitle{
+    width: 100%;
+    padding: 1rem 0 2rem;
+}
+
+.resume-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bookmark-container{
+    position: relative;
+    display: flex;
+
+    &.active{
+
+        .button--bookmark{
+            color: v.$dark-cyan;
+        }
+        .icon-bookmark__circle{
+            fill: v.$dark-cyan;
+        }
+
+        .icon-bookmark__path{
+            fill: v.$white;
+        }
+    }
+}
+
+.button--bookmark{
+    background-color: v.$light-gray;
+    color: v.$dark-gray;
+    padding: 1.2rem 2.5rem;
+    font-weight: 700;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-left: 3.6rem;
+    position: relative;
+
+}
+
+.icon-bookmark{
+    position: absolute;
+    z-index: 5;
+    left: -.8rem;
+}

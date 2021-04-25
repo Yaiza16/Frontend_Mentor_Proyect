@@ -1,0 +1,12 @@
+@use 'variables' as v;
+
+@mixin card-feature{
+    box-shadow: v.$shadow-panels;
+    border-radius: .3rem;
+    padding: 3rem;
+    background-color: v.$white;
+}
+
+@mixin font-weight($key){
+    font-weight: map-get(v.$font-weight, $key);
+}

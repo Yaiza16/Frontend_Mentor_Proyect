@@ -1,0 +1,19 @@
+@forward 'base/resets';
+@forward  'base/typo';
+
+@forward 'components/nav';
+@forward 'components/button';
+@forward 'components/card';
+
+@forward 'layout/hero';
+@forward 'layout/resume';
+@forward 'layout/stats';
+@forward 'layout/about';
+@forward 'layout/start-modal';
+@forward 'layout/success-modal';
+
+
+
+
+@use 'utilities/functions' as f;
+

@@ -1,0 +1,52 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+@use '../utilities/functions' as f;
+
+.stats-section{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    padding: v.$padding-sections;
+}
+
+.stats-container{
+    width: 100%;
+    @include m.card-feature;
+}
+
+.stats-details{
+    display: flex;
+}
+
+.stat-item{
+    padding-right: 2rem;
+
+    &:not(:first-of-type){
+        padding-left: 2.5rem;
+        border-left: 1px solid v.$light-gray;
+        padding-right: 6rem;
+    }
+
+    &__number{
+        margin-bottom: .5rem;
+    }
+
+}
+
+.progress-bar{
+    margin-top: 2rem;
+    width: 100%;
+    height: .7rem;
+    background-color: v.$light-gray;
+    border-radius: 1rem;
+
+}
+
+.bar{
+    width: 50%;
+    height: 100%;
+    background-color: v.$moderate-cyan;
+    border-radius: 1rem;
+
+}
+

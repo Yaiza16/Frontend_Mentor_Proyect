@@ -1,0 +1,195 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+@use '../utilities/functions' as f;
+
+.start-modal{
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    background-color: rgba(v.$black, .5);
+    padding: v.$padding-modals;
+    display: flex;
+    justify-content: center;
+
+    &.disabled{
+        display: none;
+    }
+}
+
+.start-modal-container{
+    @include m.card-feature;
+    position: relative;
+    
+
+}
+
+.start-modal-header{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.close-modal{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+
+    &:hover{
+
+        .close-modal__icon{
+            opacity: 1;
+        }
+    }
+
+}
+
+.start-modal-info{
+    padding: 1.5rem 0;
+}
+
+.card-start-modal{
+    padding: 2rem 1.5rem;
+    position: relative;
+
+    &--disabled .card-modal-pledge-input{
+        
+            display: none;
+        
+    }
+}
+
+
+.cards-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card-modal-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.card-modal-title{
+    transition: v.$transition;
+    cursor: pointer;
+
+    &:hover{
+        color: v.$moderate-cyan;
+    }
+}
+
+.input-radio-container{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid v.$dark-gray;
+    cursor: pointer;
+
+    &.click-input-radio{
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 20%;
+            background-color: v.$moderate-cyan;
+        }
+    }
+}
+.card-modal-input{
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.card-modal-info{
+    margin-left: 2.3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.rewards-modal-left{
+    position: absolute;
+    top: 2rem;
+    right: 1.5rem;
+}
+
+.card-modal-pledge-input{
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: .1rem solid v.$light-gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform:scaleY(100%);
+    transition: v.$transition;
+
+    &.disabled{
+        margin: 0;
+        padding: 0;
+        transform:scaleY(0);
+        visibility: hidden;
+        height: 0;
+        padding: 0;
+    }
+
+
+}
+
+
+.input-number-container{
+    position: relative;
+
+    &::before{
+        content: "$";
+        position: absolute;
+        top: 30%;
+        left: 1.5rem;
+        width: 1rem;
+        height: auto;
+        color: v.$dark-gray;
+        @include m.font-weight(bold)
+
+    }
+}
+
+.number-pledge-input{
+    appearance: none;
+    margin-right: .8rem;
+    width: 6.2rem;
+    padding: 1.2rem 2.5rem;
+    border-radius: 2rem;
+    background-color: transparent;
+    border: .1rem solid v.$light-gray;
+    color: black;
+    @include m.font-weight(bold);
+    outline: none;
+    cursor: pointer;
+    position: relative;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        appearance: none;
+        margin: 0;
+    }
+}
+
+.card-modal-container-pledge-input{
+    display: flex;
+}
+
+// Disabled card

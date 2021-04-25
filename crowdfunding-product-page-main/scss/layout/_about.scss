@@ -1,0 +1,41 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+@use '../utilities/functions' as f;
+
+.about-section{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    padding: v.$padding-sections;
+
+    &.disabled{
+        display: none;
+    }
+}
+
+.about-container{
+    width: 100%;
+    @include m.card-feature;
+}
+
+.about-title{
+    margin-bottom: 1rem;
+}
+
+.about-info{
+    padding: 1rem 0;
+
+    &:last-of-type{
+        margin-bottom: 1rem;
+    }
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.about-section.disabled{
+    display: none;
+}

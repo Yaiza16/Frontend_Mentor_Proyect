@@ -1,0 +1,55 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+@use '../utilities/functions' as f;
+
+
+.card{
+    padding: 1.5rem;
+    border: 1px solid v.$dark-gray;
+    border-radius: .5rem;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-pledge{
+    color: v.$moderate-cyan;
+    @include m.font-weight(regular)
+}
+
+.card-rewards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-info{
+    padding: 1.5rem 0;
+}
+
+.rewards-left{
+    display: flex;
+    gap: .5rem;
+}
+
+.reward-number{
+    color: v.$black;
+    @include m.font-weight(bold);
+    font-size: f.calculateRem(35);
+}
+
+
+
+// Disabled card
+
+.card--disabled{
+    opacity: .6;
+
+    .button{
+        background-color: v.$dark-gray;
+        color: v.$white;
+        cursor: unset;
+    }
+}

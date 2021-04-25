@@ -1,0 +1,28 @@
+// Colors 
+$white: #fff;
+$dark-gray: hsl(0, 0%, 48%);
+$black: hsl(0, 0%, 0%);
+$moderate-cyan: hsl(176, 50%, 47%);
+$dark-cyan: hsl(176, 72%, 28%);
+$light-gray:  hsl(0, 0%, 91%);
+
+
+// Fonts
+$font-size: 16px;
+$font-family: 'Commissioner', sans-serif;
+
+
+//Others
+$shadow-panels: 0 0 30px rgba($black, .1);
+$padding-sections: 0 22rem;
+$padding-modals: 5rem 22rem;
+$transition: all .2s ease-out;
+
+
+
+//Breakpoints
+$font-weight: (
+    'thin': 400,
+    'regular': 500,
+    'bold': 700
+)

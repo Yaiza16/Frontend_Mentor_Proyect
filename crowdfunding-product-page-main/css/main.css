@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+  overflow-x: hidden;
+  padding-bottom: 4rem;
+  position: relative;
+}
+
+p {
+  color: #7a7a7a;
+  line-height: 1.6rem;
+}
+
+h2 {
+  color: black;
+  font-size: 1.7rem;
+}
+
+h3 {
+  color: black;
+  font-size: 2.1rem;
+}
+
+h4 {
+  color: black;
+  font-size: 1.125rem;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Commissioner", sans-serif;
+}
+
+.nav {
+  width: 100%;
+  position: absolute;
+  padding: 3rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.nav-logo {
+  object-fit: contain;
+}
+
+.nav__menu {
+  text-decoration: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__item {
+  text-decoration: none;
+  color: #fff;
+}
+
+.button {
+  color: #fff;
+  background-color: #3cb4ac;
+  padding: 1.2rem 2.5rem;
+  font-weight: 700;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.button:hover {
+  background-color: #147b74;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid #7a7a7a;
+  border-radius: 0.5rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-pledge {
+  color: #3cb4ac;
+  font-weight: 500;
+}
+
+.card-rewards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-info {
+  padding: 1.5rem 0;
+}
+
+.rewards-left {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.reward-number {
+  color: black;
+  font-weight: 700;
+  font-size: 2.1875rem;
+}
+
+.card--disabled {
+  opacity: 0.6;
+}
+.card--disabled .button {
+  background-color: #7a7a7a;
+  color: #fff;
+  cursor: unset;
+}
+
+.hero {
+  filter: saturate(0.85);
+  position: relative;
+  z-index: -1;
+}
+
+.resume-section {
+  margin-top: -6rem;
+  padding: 0 22rem;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  z-index: 4;
+}
+
+.resume-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  border-radius: 0.3rem;
+  padding: 3rem;
+  background-color: #fff;
+  position: relative;
+}
+.resume-container::before {
+  content: url(/images/logo-mastercraft.svg);
+  position: absolute;
+  top: -1.84375rem;
+  right: 0;
+  left: 0;
+}
+
+.resume-subtitle {
+  width: 100%;
+  padding: 1rem 0 2rem;
+}
+
+.resume-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bookmark-container {
+  position: relative;
+  display: flex;
+}
+.bookmark-container.active .button--bookmark {
+  color: #147b74;
+}
+.bookmark-container.active .icon-bookmark__circle {
+  fill: #147b74;
+}
+.bookmark-container.active .icon-bookmark__path {
+  fill: #fff;
+}
+
+.button--bookmark {
+  background-color: #e8e8e8;
+  color: #7a7a7a;
+  padding: 1.2rem 2.5rem;
+  font-weight: 700;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding-left: 3.6rem;
+  position: relative;
+}
+
+.icon-bookmark {
+  position: absolute;
+  z-index: 5;
+  left: -0.8rem;
+}
+
+.stats-section {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  padding: 0 22rem;
+}
+
+.stats-container {
+  width: 100%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  border-radius: 0.3rem;
+  padding: 3rem;
+  background-color: #fff;
+}
+
+.stats-details {
+  display: flex;
+}
+
+.stat-item {
+  padding-right: 2rem;
+}
+.stat-item:not(:first-of-type) {
+  padding-left: 2.5rem;
+  border-left: 1px solid #e8e8e8;
+  padding-right: 6rem;
+}
+.stat-item__number {
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  margin-top: 2rem;
+  width: 100%;
+  height: 0.7rem;
+  background-color: #e8e8e8;
+  border-radius: 1rem;
+}
+
+.bar {
+  width: 50%;
+  height: 100%;
+  background-color: #3cb4ac;
+  border-radius: 1rem;
+}
+
+.about-section {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  padding: 0 22rem;
+}
+.about-section.disabled {
+  display: none;
+}
+
+.about-container {
+  width: 100%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  border-radius: 0.3rem;
+  padding: 3rem;
+  background-color: #fff;
+}
+
+.about-title {
+  margin-bottom: 1rem;
+}
+
+.about-info {
+  padding: 1rem 0;
+}
+.about-info:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-section.disabled {
+  display: none;
+}
+
+.start-modal {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5rem 22rem;
+  display: flex;
+  justify-content: center;
+}
+.start-modal.disabled {
+  display: none;
+}
+
+.start-modal-container {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  border-radius: 0.3rem;
+  padding: 3rem;
+  background-color: #fff;
+  position: relative;
+}
+
+.start-modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close-modal {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+.close-modal:hover .close-modal__icon {
+  opacity: 1;
+}
+
+.start-modal-info {
+  padding: 1.5rem 0;
+}
+
+.card-start-modal {
+  padding: 2rem 1.5rem;
+  position: relative;
+}
+.card-start-modal--disabled .card-modal-pledge-input {
+  display: none;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card-modal-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.card-modal-title {
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+.card-modal-title:hover {
+  color: #3cb4ac;
+}
+
+.input-radio-container {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid #7a7a7a;
+  cursor: pointer;
+}
+.input-radio-container.click-input-radio {
+  position: relative;
+}
+.input-radio-container.click-input-radio::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 20%;
+  background-color: #3cb4ac;
+}
+
+.card-modal-input {
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.card-modal-info {
+  margin-left: 2.3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.rewards-modal-left {
+  position: absolute;
+  top: 2rem;
+  right: 1.5rem;
+}
+
+.card-modal-pledge-input {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 0.1rem solid #e8e8e8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: scaleY(100%);
+  transition: all 0.2s ease-out;
+}
+.card-modal-pledge-input.disabled {
+  margin: 0;
+  padding: 0;
+  transform: scaleY(0);
+  visibility: hidden;
+  height: 0;
+  padding: 0;
+}
+
+.input-number-container {
+  position: relative;
+}
+.input-number-container::before {
+  content: "$";
+  position: absolute;
+  top: 30%;
+  left: 1.5rem;
+  width: 1rem;
+  height: auto;
+  color: #7a7a7a;
+  font-weight: 700;
+}
+
+.number-pledge-input {
+  appearance: none;
+  margin-right: 0.8rem;
+  width: 6.2rem;
+  padding: 1.2rem 2.5rem;
+  border-radius: 2rem;
+  background-color: transparent;
+  border: 0.1rem solid #e8e8e8;
+  color: black;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+.number-pledge-input::-webkit-inner-spin-button, .number-pledge-input::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.card-modal-container-pledge-input {
+  display: flex;
+}
+
+.success-modal {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.success-modal.disabled {
+  display: none;
+}
+
+.success-modal-container {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  border-radius: 0.3rem;
+  padding: 3rem;
+  background-color: #fff;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */
