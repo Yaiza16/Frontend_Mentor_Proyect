@@ -2,6 +2,10 @@
 @use '../utilities/mixins' as m;
 @use '../utilities/functions' as f;
 
+:root{
+    --width-bar: 89.914%;
+}
+
 .stats-section{
     margin-top: 2rem;
     display: flex;
@@ -43,7 +47,7 @@
 }
 
 .bar{
-    width: 50%;
+    width: var(--width-bar);
     height: 100%;
     background-color: v.$moderate-cyan;
     border-radius: 1rem;

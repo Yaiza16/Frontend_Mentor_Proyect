@@ -201,6 +201,10 @@ html {
   left: -0.8rem;
 }
 
+:root {
+  --width-bar: 89.914%;
+}
+
 .stats-section {
   margin-top: 2rem;
   display: flex;
@@ -241,7 +245,7 @@ html {
 }
 
 .bar {
-  width: 50%;
+  width: var(--width-bar);
   height: 100%;
   background-color: #3cb4ac;
   border-radius: 1rem;
@@ -333,7 +337,8 @@ html {
   padding: 2rem 1.5rem;
   position: relative;
 }
-.card-start-modal--disabled .card-modal-pledge-input {
+
+.card-modal-pledge-input {
   display: none;
 }
 
@@ -366,20 +371,6 @@ html {
   border: 1px solid #7a7a7a;
   cursor: pointer;
 }
-.input-radio-container.click-input-radio {
-  position: relative;
-}
-.input-radio-container.click-input-radio::before {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 20%;
-  background-color: #3cb4ac;
-}
 
 .card-modal-input {
   appearance: none;
@@ -400,16 +391,6 @@ html {
   right: 1.5rem;
 }
 
-.card-modal-pledge-input {
-  padding-top: 1rem;
-  margin-top: 1rem;
-  border-top: 0.1rem solid #e8e8e8;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transform: scaleY(100%);
-  transition: all 0.2s ease-out;
-}
 .card-modal-pledge-input.disabled {
   margin: 0;
   padding: 0;
@@ -454,6 +435,45 @@ html {
 
 .card-modal-container-pledge-input {
   display: flex;
+}
+
+.card-start-modal--disabled {
+  pointer-events: none;
+}
+
+.card-start-modal--focus {
+  border: 2px solid #3cb4ac;
+}
+.card-start-modal--focus .input-radio-container {
+  position: relative;
+}
+.card-start-modal--focus .input-radio-container::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 20%;
+  background-color: #3cb4ac;
+}
+.card-start-modal--focus .card-modal-container-pledge-input {
+  display: flex;
+}
+.card-start-modal--focus form {
+  display: flex;
+}
+.card-start-modal--focus .card-modal-pledge-input {
+  display: flex;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 0.1rem solid #e8e8e8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: scaleY(100%);
+  transition: all 0.2s ease-out;
 }
 
 .success-modal {

@@ -35,7 +35,7 @@
       <h2 class="resume-title">Mastercraft Bamboo Monitor Riser</h2>
       <p class="resume-subtitle">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
       <div class="resume-buttons">
-        <button class="button">Back this project</button>
+        <button class="button" id="button-project">Back this project</button>
 
         <div class="bookmark-container" id="bookmark-container">
           <!-- <img src="images/icon-bookmark.svg" alt="icon-bookmark" class="icon-bookmark"> -->
@@ -57,11 +57,11 @@
     <div class="stats-container">
       <div class="stats-details">
         <div class="stat-item">
-          <h3 class="stat-item__number">$89,914</h3>
+          <h3 class="stat-item__number">$<span id="total-amount">89,914</span></h3>
           <p class="stat-item__title">of $100,000 backed</p>
         </div>
         <div class="stat-item">
-          <h3 class="stat-item__number">5,007</h3>
+          <h3 class="stat-item__number" id="backers">5,007</h3>
           <p class="stat-item__title">total backers</p>
         </div>
         <div class="stat-item">
@@ -97,7 +97,7 @@
               you’ll be added to a special Backer member list.</p>
             <div class="card-rewards">
               <div class="rewards-left">
-                <p class="reward-number">101</p>
+                <p class="reward-number" data-id="1">101</p>
                 <p class="reward-left">left</p>
               </div>
               <button class="button button-reward">Select Reward</button>
@@ -114,7 +114,7 @@
                 member list. Shipping is included.</p>
               <div class="card-rewards">
                 <div class="rewards-left">
-                  <p class="reward-number">64</p>
+                  <p class="reward-number" data-id="2">64</p>
                   <p class="reward-left">left</p>
                 </div>
                 <button class="button button-reward">Select Reward</button>
@@ -130,7 +130,7 @@
                 to our Backer member list. Shipping is included.</p>
               <div class="card-rewards">
                 <div class="rewards-left">
-                  <p class="reward-number">101</p>
+                  <p class="reward-number" data-id="3">0</p>
                   <p class="reward-left">left</p>
                 </div>
                 <button class="button button-reward" disabled>Out of Stock</button>
@@ -153,7 +153,7 @@
       <p class="start-modal-info">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
       
       <div class="cards-container">
-        <div class="card card-start-modal">
+        <div class="card card-start-modal" data-id="1">
           <div class="card-modal-header">
             <div class="input-radio-container">
               <input type="radio" name="reward" class="card-modal-input">
@@ -165,15 +165,17 @@
           <div class="card-modal-pledge-input">
             <p class="modal-pledge-input-inf">Enter your pledge</p>
             <div class="card-modal-container-pledge-input">
-              <div class="input-number-container">
-                <input type="number" class="number-pledge-input" placeholder="0" value="0" min="0">
-              </div>
-              <button type="submit" class="button pledge-submit">Continue</button>
+              <form class="form-modal">
+                <div class="input-number-container">
+                  <input type="number" class="number-pledge-input" placeholder="0" value="0" min="0">
+                </div>
+                <button type="submit" class="button pledge-submit">Continue</button>
+              </form>
             </div>
           </div>
         </div>
         
-        <div class="card card-start-modal">
+        <div class="card card-start-modal" data-id="2">
           <div class="card-modal-header">
             <div class="input-radio-container">
               <input type="radio" name="reward" class="card-modal-input">
@@ -184,21 +186,23 @@
           <p class="card-modal-info">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
             you’ll be added to a special Backer member list.</p>
           <div class="rewards-left rewards-modal-left">
-            <p class="reward-number reward-modal-number">101</p>
+            <p class="reward-number reward-modal-number" data-id="1">101</p>
             <p class="reward-left reward-modal-left">left</p>
           </div>
           <div class="card-modal-pledge-input">
             <p class="modal-pledge-input-inf">Enter your pledge</p>
             <div class="card-modal-container-pledge-input">
-              <div class="input-number-container">
-                <input type="number" class="number-pledge-input" placeholder="25" value="25" min="25">
-              </div>
-              <button type="submit" class="button pledge-submit">Continue</button>
+              <form class="form-modal">
+                <div class="input-number-container">
+                  <input type="number" class="number-pledge-input" id="pledge-input" placeholder="25" value="25" min="25">
+                </div>
+                <button type="submit" class="button pledge-submit">Continue</button>
+              </form>
             </div>
           </div>
         </div>
 
-        <div class="card card-start-modal">
+        <div class="card card-start-modal" data-id="3">
           <div class="card-modal-header">
             <div class="input-radio-container">
               <input type="radio" name="reward" class="card-modal-input">
@@ -209,24 +213,26 @@
           <p class="card-modal-info">You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
             member list. Shipping is included.</p>
             <div class="rewards-left rewards-modal-left">
-              <p class="reward-number reward-modal-number">64</p>
+              <p class="reward-number reward-modal-number" data-id="2">64</p>
               <p class="reward-left reward-modal-left">left</p>
             </div>
             <div class="card-modal-pledge-input">
               <p class="modal-pledge-input-inf">Enter your pledge</p>
               <div class="card-modal-container-pledge-input">
-                <div class="input-number-container">
-                  <input type="number" class="number-pledge-input" placeholder="75" value="75" min="75">
-                </div>
-                <button type="submit" class="button pledge-submit">Continue</button>
+                <form class="form-modal">
+                  <div class="input-number-container">
+                    <input type="number" class="number-pledge-input" placeholder="75" value="75" min="75">
+                  </div>
+                  <button type="submit" class="button pledge-submit">Continue</button>
+                </form>
               </div>
             </div>
         </div>
 
-        <div class="card card-start-modal card-start-modal--disabled card--disabled">
+        <div class="card card-start-modal card-start-modal--disabled card--disabled" display>
           <div class="card-modal-header">
             <div class="input-radio-container">
-              <input type="radio" name="reward" class="card-modal-input">
+              <input type="radio" name="reward" class="card-modal-input" >
             </div>
             <h4 class="card-modal-title">Mahogany Special Edition</h4>
             <p class="card-pledge card-modal-pledge">Pledge $200 or more</p>
@@ -234,16 +240,18 @@
           <p class="card-modal-info">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
             to our Backer member list. Shipping is included.</p>
             <div class="rewards-left rewards-modal-left">
-              <p class="reward-number reward-modal-number">0</p>
+              <p class="reward-number reward-modal-number" data-id="3">0</p>
               <p class="reward-left reward-modal-left">left</p>
             </div>
-            <div class="card-modal-pledge-input">
+            <div class="card-modal-pledge-input disabled" data-id="4">
               <p class="modal-pledge-input-inf">Enter your pledge</p>
               <div class="card-modal-container-pledge-input">
-                <div class="input-number-container">
-                  <input type="number" class="number-pledge-input" placeholder="200" value="200" min="200">
-                </div>
-                <button type="submit" class="button pledge-submit">Continue</button>
+                <form class="form-modal">
+                  <div class="input-number-container">
+                    <input type="number" class="number-pledge-input" placeholder="200" value="200" min="200">
+                  </div>
+                  <button type="submit" class="button pledge-submit">Continue</button>
+                </form>
               </div>
             </div>
         </div>
@@ -253,13 +261,13 @@
 
 
   <!-- Success-modal -->
-  <section class="success-modal disabled">
+  <section class="success-modal disabled" id="success-modal">
     <div class="success-modal-container">
       <img src="images/icon-check.svg" alt="icon-check" class="success-modal-icon">
       <h3 class="success-modal-title">Thanks for your support!</h3>
       <p class="success-modal-info">Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
         an email once our campaign is completed.</p>
-      <div class="button success-modal-button">Got it!</div>
+      <div class="button success-modal-button" id="success-modal-button">Got it!</div>
     </div>
   </section>
 
