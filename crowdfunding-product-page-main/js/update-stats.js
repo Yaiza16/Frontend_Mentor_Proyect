@@ -32,7 +32,7 @@ export default function updateStats(form, inputSelector, totalAmount, backers, s
              
             }
 
-            //Update rewars left
+            //Update rewards left
             updateNumberChanges(rewardModalNumberSelector, el, rewardNumberAboutSelector, aboutSection);
 
             // Remove focus class
