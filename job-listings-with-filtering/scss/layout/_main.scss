@@ -1,0 +1,20 @@
+@use '../base/variables' as v;
+
+.main{
+    background-color: v.$light-grayish-cyan;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 156px);
+    // justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem;
+    position: relative;
+    z-index: 99;
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 2rem;
+}

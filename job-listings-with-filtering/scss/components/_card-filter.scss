@@ -1,0 +1,18 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.card-filter{
+    background-color: v.$light-grayish-cyan;
+    color: v.$desatured-dark-cyan;
+    padding: .4rem .4rem .25rem;
+    border-radius: .2rem;
+    @include m.font-weight(bold);
+    font-size: .8rem;
+    cursor: pointer;
+    transition: v.$transition;
+
+    &:hover{
+        background-color: v.$desatured-dark-cyan;
+        color: v.$light-grayish-cyan;
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>Frontend Mentor | Job Listings</title>
+</head>
+<body>
+  <header class="header">
+    <img src="images/bg-header-desktop.svg" alt="">
+  </header>
+  <main class="main">
+
+    <div class="cards-container" id="cards-container">
+  
+    </div>
+
+
+  </main>
+
+  <section class="modal disabled" id="modal">
+    <div class="filters-container-modal" id="filters-container-modal">
+
+    </div>
+  </section>
+
+  <template id="template-card">
+    <div class="card">
+      <div class="card-container-info">
+        <img src="images/myhome.svg" alt="" class="card-logo">
+        <div class="card-info">
+          <div class="card-header">
+            <h3 class="card-company"></h3>
+            <div class="card-features">
+            </div>
+          </div>
+          <h2 class="card-position"></h2>
+          <div class="card-data">
+            <p class="card-data__item card-data__item--postedAt"></p>
+            <p class="card-data__item card-data__item--contract"></p>
+            <p class="card-data__item card-data__item--location"></p>
+          </div>
+        </div>
+      </div>
+      <div class="card-filters">
+        <div class="card-filter card-filter--role">Frontend</div>
+        <div class="card-filter card-filter--level">Senior</div>
+      </div>
+    </div>
+  </template>
+
+  <template id="template-modal">
+    <div class="filter-modal">
+      <p class="filter-modal-name">Javascript</p>
+      <div class="filter-close-container">
+        <img src="./images/icon-remove.svg" alt="" class="filter-close">
+      </div>
+    </div>
+  </template>
+  <script src="js/app.js"></script>
+</body>
+</html>

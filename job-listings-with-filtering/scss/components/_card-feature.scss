@@ -1,0 +1,14 @@
+@use '../base/variables' as v;
+
+.card-feature{
+    text-transform: uppercase;
+    color: v.$white;
+    background-color: v.$desatured-dark-cyan;
+    font-size: .7rem;
+    border-radius: 1rem;
+    padding: .5rem .5rem .2rem;
+
+    &--featured{
+        background-color: v.$very-dark-grayish-cyan;
+    }
+}

@@ -1,0 +1,25 @@
+// COLORS
+$desatured-dark-cyan: hsl(180, 29%, 50%);
+$light-grayish-cyan:hsl(180, 52%, 96%);
+$soft-grayish-cyan: hsl(180, 31%, 95%);
+$dark-grayish-cyan: hsl(180, 8%, 52%);
+$very-dark-grayish-cyan: hsl(180, 14%, 20%);
+$white: white;
+$black: black;
+
+
+// FONTS
+$font-family: 'Spartan', sans-serif;
+$font-size: 15px;
+
+//box-shadow
+$box-shadow: .2rem 1rem 1rem rgba($very-dark-grayish-cyan, .1);
+
+//Transition
+$transition: all .2s ease-out;
+
+//Breakpoints
+$font-weight: (
+    'regular': 500,
+    'bold': 700
+)

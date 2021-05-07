@@ -1,0 +1,55 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.modal{
+    position: absolute;
+    padding: 2rem;
+    top: 5.8rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 99;
+
+    
+    &.disabled{
+        display: none;
+    }
+}
+
+.filters-container-modal{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 3rem;
+    width: 80%;
+    border-radius: .3rem;
+    background: v.$white;
+    box-shadow: v.$box-shadow; 
+}
+
+.filter-modal{
+    display: flex;
+    align-items: center;
+    background-color: v.$light-grayish-cyan;
+    border-radius: .3rem;
+}
+
+.filter-modal-name{
+    padding: .4rem;
+    color: v.$desatured-dark-cyan;
+    @include m.font-weight(bold);
+    font-size: .8rem;
+}
+
+.filter-close-container{
+    display: flex;
+    align-items: center;
+    background-color: v.$desatured-dark-cyan;
+    padding: .5rem;
+    cursor: pointer;
+    transition: v.$transition;
+
+    &:hover{
+        background-color: v.$black;
+    }
+}

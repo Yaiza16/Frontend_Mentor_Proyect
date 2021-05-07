@@ -1,0 +1,97 @@
+@use '../base/variables' as v;
+
+.card{
+    background-color: v.$white;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    border-radius: .3rem;
+    box-shadow: v.$box-shadow;
+
+    &--disabled{
+        display: none;
+    }
+}
+
+.card-container-info{
+    display: flex;
+    gap: 1rem;
+}
+
+.card-logo{
+    object-fit: contain;
+}
+
+.card-info{
+
+    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.card-header{
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+}
+
+.card-company{
+    color: v.$desatured-dark-cyan;
+}
+
+.card-features{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.card-position{
+    color: v.$very-dark-grayish-cyan;
+    font-size: 1.2rem;
+    margin: .4rem 0;
+    cursor: pointer;
+
+    &:hover{
+        color: v.$desatured-dark-cyan;
+    }
+}
+
+.card-data{
+    display: flex;
+    justify-content: space-between;
+    color: v.$dark-grayish-cyan;
+    gap: 2rem;
+
+    &__item:nth-child(2){
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: -1.2rem;
+            width: .25rem;
+            height: .25rem;
+            border-radius: 50%;
+            top: calc(50% - .2rem);
+            background-color: v.$dark-grayish-cyan;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            right: -1.2rem;
+            width: .25rem;
+            height: .25rem;
+            border-radius: 50%;
+            top: calc(50% - .2rem);
+            background-color: v.$dark-grayish-cyan;
+        }
+    }
+}
+
+.card-filters{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
