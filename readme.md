@@ -24,4 +24,8 @@ Frontend coding challenges from [Frontend Mentor](https://www.frontendmentor.io)
 
 [11. Interactive pricing component](https://www.frontendmentor.io/solutions/interactive-pricing-component-EN8NHpf8z)   —   [Live Site URL](https://pricing-component-yaiza.netlify.app/)
 
-[12. Pricing component with toggle master ](https://www.frontendmentor.io/solutions/pricing-component-with-toggle-master-bem-sass-and-js-8ng_w9ETG)   —   [Live Site URL](https://pricing-component-toggle-yaiza.netlify.app/)
+[12. Pricing component with toggle master](https://www.frontendmentor.io/solutions/pricing-component-with-toggle-master-bem-sass-and-js-8ng_w9ETG)   —   [Live Site URL](https://pricing-component-toggle-yaiza.netlify.app/)
+
+[13. Crowdfunding product page](https://www.frontendmentor.io/solutions/crowdfunding-product-page-using-js-vanilla-sass-and-bem-rMKRWY9BH)   —   [Live Site URL](https://crowfunding-page-yaiza.netlify.app/)
+
+[14. Job listings with filtering](https://www.frontendmentor.io/solutions/job-listings-with-filtering-using-js-vanilla-sass-and-bem-895XPtukj)   —   [Live Site URL](https://job-listing-filtering.netlify.app/)
