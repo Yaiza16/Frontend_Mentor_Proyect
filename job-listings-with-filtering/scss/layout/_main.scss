@@ -1,20 +1,41 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 .main{
     background-color: v.$light-grayish-cyan;
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 156px);
-    // justify-content: center;
     align-items: center;
     padding: 5rem 2rem;
     position: relative;
     z-index: 99;
+    width: 100vw;
+
+    @include m.mq('large'){
+        padding-top: 8rem;
+    }
+
+    @include m.mq('large'){
+        padding-top: 11rem;
+    }
 }
 
 .cards-container{
     display: flex;
     flex-direction: column;
     width: 80%;
+    min-width: 54rem;
     gap: 2rem;
+
+    @include m.mq('large'){
+        min-width: 27rem;
+        width: auto;
+    }
+
+    @include m.mq('medium'){
+        width: auto;
+        gap: 4rem;
+        min-width: 20rem;
+    }
 }

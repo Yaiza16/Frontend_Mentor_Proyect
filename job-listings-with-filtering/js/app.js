@@ -19,6 +19,7 @@ cardsContainer.addEventListener('click', e =>{
 
 modal.addEventListener('click', e =>{
     removeFilter(e)
+    buttonClear(e)
 })
 
 
@@ -70,6 +71,8 @@ const pintCards = data =>{
             newFeature.appendChild(newFeatureContent)
             newFeature.classList.add('card-feature', 'card-feature--featured');
             clone.querySelector('.card-features').appendChild(newFeature)
+
+            clone.querySelector('.card').classList.add('card--featured')
         }
 
         //Add filters (languages)
@@ -175,6 +178,25 @@ const removeFilter = e =>{
             modal.classList.add('disabled')
         }
 
+    }
+}
+
+const buttonClear = e =>{
+    if (e.target.classList.contains('clear-button')){
+        if (modalContainer.hasChildNodes()){
+            while (modalContainer.childNodes.length>0){
+                modalContainer.removeChild(modalContainer.firstChild)
+            }
+        }
+
+        modal.classList.add('disabled')
+
+        const cards = document.querySelectorAll('.card')
+        cards.forEach(card =>{
+            if (card.classList.contains('card--disabled')){
+                card.classList.remove('card--disabled')
+            }
+        })
     }
 }
 

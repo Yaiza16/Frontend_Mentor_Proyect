@@ -1,4 +1,5 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 .card{
     background-color: v.$white;
@@ -8,19 +9,41 @@
     justify-content: space-between;
     border-radius: .3rem;
     box-shadow: v.$box-shadow;
+    
+    @include m.mq('large'){
+        flex-direction: column;
+    }
+
+    @include m.mq('medium'){
+        gap: unset;
+    }
 
     &--disabled{
         display: none;
+    }
+
+    &.card--featured{
+        border-left: .4rem solid v.$desatured-dark-cyan;
     }
 }
 
 .card-container-info{
     display: flex;
     gap: 1rem;
+
+    @include m.mq('medium'){
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: -3rem;
+    }
 }
 
 .card-logo{
     object-fit: contain;
+
+    @include m.mq('medium'){
+        width: 4rem;
+    }
 }
 
 .card-info{
@@ -28,6 +51,10 @@
     align-items: center;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
+
+    @include m.mq('medium'){
+        margin-bottom: .5rem;
+    }
 }
 .card-header{
     display: flex;
@@ -94,4 +121,10 @@
     display: flex;
     align-items: center;
     gap: .8rem;
+
+    @include m.mq('medium'){
+        flex-wrap: wrap;
+        padding-top: 1rem;
+        border-top: .5px solid rgba(v.$dark-grayish-cyan, .5);
+    }
 }

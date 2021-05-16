@@ -8,7 +8,12 @@
     width: 100%;
     display: flex;
     justify-content: center;
+
     z-index: 99;
+
+    @include m.mq('medium'){
+        padding: 2rem 1rem;
+    }
 
     
     &.disabled{
@@ -16,15 +21,51 @@
     }
 }
 
+.container-modal{
+    display: flex;
+    justify-content: space-between;
+    background: v.$white;
+    box-shadow: v.$box-shadow; 
+    border-radius: .3rem;
+    padding: 1.2rem 3rem;
+    align-items: center;
+    width: 80%;
+    min-width: 54rem;
+
+    @include m.mq('large'){
+        width: 100%;
+        min-width: 28rem;
+        padding: 1.2rem;
+    }
+
+    @include m.mq('medium'){
+        min-width: 20rem;
+    }
+
+}
+
+.clear-button{
+    font-size: .8rem;
+    @include m.font-weight(bold);
+    color: v.$dark-grayish-cyan;
+    cursor: pointer;
+    transition: v.$transition;
+
+    &:hover{
+        color: v.$desatured-dark-cyan;
+        text-decoration: underline;
+    }
+}
+
 .filters-container-modal{
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1.2rem 3rem;
-    width: 80%;
-    border-radius: .3rem;
-    background: v.$white;
-    box-shadow: v.$box-shadow; 
+    
+
+    @include m.mq('large'){
+        flex-wrap: wrap;
+    }
 }
 
 .filter-modal{
@@ -48,6 +89,7 @@
     padding: .5rem;
     cursor: pointer;
     transition: v.$transition;
+    border-radius: 0 .3rem .3rem 0;
 
     &:hover{
         background-color: v.$black;

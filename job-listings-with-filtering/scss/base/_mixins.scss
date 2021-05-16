@@ -3,3 +3,11 @@
 @mixin font-weight($key){
     font-weight: map-get(v.$font-weight, $key);
 }
+
+@mixin mq($key){
+    $size: map-get(v.$media-query, $key);
+
+    @media only screen and (max-width: $size){
+        @content;
+    }
+}

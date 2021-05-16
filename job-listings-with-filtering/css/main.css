@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 body {
@@ -25,23 +24,53 @@ h3 {
   border-radius: 0.3rem;
   box-shadow: 0.2rem 1rem 1rem rgba(44, 58, 58, 0.1);
 }
+@media only screen and (max-width: 57em) {
+  .card {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 35em) {
+  .card {
+    gap: unset;
+  }
+}
 .card--disabled {
   display: none;
+}
+.card.card--featured {
+  border-left: 0.4rem solid #5ba4a4;
 }
 
 .card-container-info {
   display: flex;
   gap: 1rem;
 }
+@media only screen and (max-width: 35em) {
+  .card-container-info {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -3rem;
+  }
+}
 
 .card-logo {
   object-fit: contain;
+}
+@media only screen and (max-width: 35em) {
+  .card-logo {
+    width: 4rem;
+  }
 }
 
 .card-info {
   align-items: center;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
+}
+@media only screen and (max-width: 35em) {
+  .card-info {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .card-header {
@@ -106,6 +135,13 @@ h3 {
   align-items: center;
   gap: 0.8rem;
 }
+@media only screen and (max-width: 35em) {
+  .card-filters {
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    border-top: 0.5px solid rgba(123, 142, 142, 0.5);
+  }
+}
 
 .card-feature {
   text-transform: uppercase;
@@ -138,7 +174,7 @@ h3 {
   width: 100vw;
   height: 156px;
   background-color: #5ba4a4;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .main {
@@ -150,13 +186,38 @@ h3 {
   padding: 5rem 2rem;
   position: relative;
   z-index: 99;
+  width: 100vw;
+}
+@media only screen and (max-width: 57em) {
+  .main {
+    padding-top: 8rem;
+  }
+}
+@media only screen and (max-width: 57em) {
+  .main {
+    padding-top: 11rem;
+  }
 }
 
 .cards-container {
   display: flex;
   flex-direction: column;
   width: 80%;
+  min-width: 54rem;
   gap: 2rem;
+}
+@media only screen and (max-width: 57em) {
+  .cards-container {
+    min-width: 27rem;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 35em) {
+  .cards-container {
+    width: auto;
+    gap: 4rem;
+    min-width: 20rem;
+  }
 }
 
 .modal {
@@ -168,19 +229,60 @@ h3 {
   justify-content: center;
   z-index: 99;
 }
+@media only screen and (max-width: 35em) {
+  .modal {
+    padding: 2rem 1rem;
+  }
+}
 .modal.disabled {
   display: none;
+}
+
+.container-modal {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  box-shadow: 0.2rem 1rem 1rem rgba(44, 58, 58, 0.1);
+  border-radius: 0.3rem;
+  padding: 1.2rem 3rem;
+  align-items: center;
+  width: 80%;
+  min-width: 54rem;
+}
+@media only screen and (max-width: 57em) {
+  .container-modal {
+    width: 100%;
+    min-width: 28rem;
+    padding: 1.2rem;
+  }
+}
+@media only screen and (max-width: 35em) {
+  .container-modal {
+    min-width: 20rem;
+  }
+}
+
+.clear-button {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #7b8e8e;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.clear-button:hover {
+  color: #5ba4a4;
+  text-decoration: underline;
 }
 
 .filters-container-modal {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.2rem 3rem;
-  width: 80%;
-  border-radius: 0.3rem;
-  background: white;
-  box-shadow: 0.2rem 1rem 1rem rgba(44, 58, 58, 0.1);
+}
+@media only screen and (max-width: 57em) {
+  .filters-container-modal {
+    flex-wrap: wrap;
+  }
 }
 
 .filter-modal {
@@ -204,6 +306,7 @@ h3 {
   padding: 0.5rem;
   cursor: pointer;
   transition: all 0.2s ease-out;
+  border-radius: 0 0.3rem 0.3rem 0;
 }
 .filter-close-container:hover {
   background-color: black;
