@@ -1,0 +1,65 @@
+// @use '..variables' as v;
+@use '../base/functions' as f;
+@use '../base/mixins' as m;
+
+.main{
+    // background-color: f.setColor(dt, main-background);
+    // color: f.setColor(dt, text-screen);
+    width: 100vw;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-container{
+    width: 40%;
+}
+
+.calculator-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+}
+
+
+.theme-toggler{
+    display: flex;
+    align-items: flex-end;
+    gap: .5rem;
+}
+
+.theme-title{
+    text-transform: uppercase;
+    @include m.font-size(toggle);
+    padding-bottom: .2rem;
+}
+
+.theme-buttons-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.theme-numbers{
+    display: flex;
+    padding: 0 .15rem .15rem;
+    justify-content: space-between;
+    
+    &__item{
+        @include m.font-size(toggle);
+    }
+}
+
+
+.screen{
+    padding: .8rem;
+    border: none;
+    outline: none;
+    @include m.font-size(screen);
+    width: 100%;
+    text-align: right;
+    border-radius: .5rem;
+    cursor: auto;
+    margin-bottom: .8rem;
+}

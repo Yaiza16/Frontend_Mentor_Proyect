@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 32px;
+  font-family: "Spartan", sans-serif;
+  overflow-x: hidden;
+}
+
+.theme-buttons {
+  padding: 0.15rem;
+  gap: 0.15rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  display: flex;
+}
+
+.theme-buttons__item {
+  border: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.button {
+  border-radius: 0.2rem;
+  border: none;
+  padding: 0.3rem 0;
+  border-bottom: 0.15rem solid transparent;
+  cursor: pointer;
+}
+
+.button[data-result] {
+  font-size: 0.8rem;
+}
+
+.main {
+  width: 100vw;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-container {
+  width: 40%;
+}
+
+.calculator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.theme-toggler {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.theme-title {
+  text-transform: uppercase;
+  font-size: 0.3rem;
+  padding-bottom: 0.2rem;
+}
+
+.theme-buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-numbers {
+  display: flex;
+  padding: 0 0.15rem 0.15rem;
+  justify-content: space-between;
+}
+.theme-numbers__item {
+  font-size: 0.3rem;
+}
+
+.screen {
+  padding: 0.8rem;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: right;
+  border-radius: 0.5rem;
+  cursor: auto;
+  margin-bottom: 0.8rem;
+}
+
+.buttons-container {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 0.8rem;
+  grid-template-areas: "seven eight nine del" "four five six plus" "one two three subtraction" "point cero division multiplication" "reset reset equals equals";
+}
+
+.button[data-number="1"] {
+  grid-area: one;
+}
+
+.button[data-number="2"] {
+  grid-area: two;
+}
+
+.button[data-number="3"] {
+  grid-area: three;
+}
+
+.button[data-number="4"] {
+  grid-area: four;
+}
+
+.button[data-number="5"] {
+  grid-area: five;
+}
+
+.button[data-number="1"] {
+  grid-area: one;
+}
+
+.button[data-number="6"] {
+  grid-area: six;
+}
+
+.button[data-number="7"] {
+  grid-area: seven;
+}
+
+.button[data-number="8"] {
+  grid-area: eight;
+}
+
+.button[data-number="9"] {
+  grid-area: nine;
+}
+
+.button[data-number="0"] {
+  grid-area: cero;
+}
+
+.button[data-operation=plus] {
+  grid-area: plus;
+}
+
+.button[data-operation=subtraction] {
+  grid-area: subtraction;
+}
+
+.button[data-operation=division] {
+  grid-area: division;
+}
+
+.button[data-operation=point] {
+  grid-area: point;
+}
+
+.button[data-operation=multiplication] {
+  grid-area: multiplication;
+}
+
+.button[data-result=clear-all] {
+  grid-area: reset;
+}
+
+.button[data-result=clear] {
+  grid-area: del;
+}
+
+.button[data-result=equals] {
+  grid-area: equals;
+}
+
+.main.dark-theme {
+  background-color: #3a4764;
+  color: white;
+}
+.main.dark-theme .theme-buttons {
+  background-color: #232c43;
+}
+.main.dark-theme .theme-buttons__item {
+  background-color: #d03f2f;
+}
+.main.dark-theme .theme-buttons__item.light-theme {
+  background-color: transparent;
+}
+.main.dark-theme .theme-buttons__item.purple-theme {
+  background-color: transparent;
+}
+.main.dark-theme .screen {
+  background-color: #182034;
+  color: white;
+}
+.main.dark-theme .buttons-container {
+  background-color: #232c43;
+}
+.main.dark-theme .button {
+  background-color: #eae3dc;
+  border-color: #b4a597;
+  color: #444b5a;
+}
+.main.dark-theme .button[data-result=clear-all], .main.dark-theme .button[data-result=clear] {
+  background-color: #637097;
+  border-color: #404e72;
+  color: white;
+}
+.main.dark-theme .button[data-result=equals] {
+  background-color: #d03f2f;
+  border-color: #93261a;
+  color: white;
+}
+
+.main.light-theme {
+  background-color: #e6e6e6;
+  color: #35352c;
+}
+.main.light-theme .theme-buttons {
+  background-color: #d1cccc;
+}
+.main.light-theme .theme-buttons__item {
+  background-color: #ca5502;
+}
+.main.light-theme .theme-buttons__item.dark-theme {
+  background-color: transparent;
+}
+.main.light-theme .theme-buttons__item.purple-theme {
+  background-color: transparent;
+}
+.main.light-theme .screen {
+  background-color: #ededed;
+  color: #35352c;
+}
+.main.light-theme .buttons-container {
+  background-color: #d1cccc;
+}
+.main.light-theme .button {
+  background-color: #e5e4e1;
+  border-color: #a69d91;
+  color: #35352c;
+}
+.main.light-theme .button[data-result=clear-all], .main.light-theme .button[data-result=clear] {
+  background-color: #377f86;
+  border-color: #1b5f65;
+  color: white;
+}
+.main.light-theme .button[data-result=equals] {
+  background-color: #ca5502;
+  border-color: #893901;
+  color: white;
+}
+
+.main.purple-theme {
+  background-color: #160628;
+  color: #ffe53d;
+}
+.main.purple-theme .theme-buttons {
+  background-color: #1d0934;
+}
+.main.purple-theme .theme-buttons__item {
+  background-color: #00e0d1;
+}
+.main.purple-theme .theme-buttons__item.dark-theme {
+  background-color: transparent;
+}
+.main.purple-theme .theme-buttons__item.light-theme {
+  background-color: transparent;
+}
+.main.purple-theme .screen {
+  background-color: #1d0934;
+  color: #ffe53d;
+}
+.main.purple-theme .buttons-container {
+  background-color: #1d0934;
+}
+.main.purple-theme .button {
+  background-color: #341c4f;
+  border-color: #871c9c;
+  color: #ffe53d;
+}
+.main.purple-theme .button[data-result=clear-all], .main.purple-theme .button[data-result=clear] {
+  background-color: #58077d;
+  border-color: #bc15f4;
+  color: white;
+}
+.main.purple-theme .button[data-result=equals] {
+  background-color: #00e0d1;
+  border-color: #6cf9f2;
+  color: #1b2428;
+}
+
+/*# sourceMappingURL=main.css.map */

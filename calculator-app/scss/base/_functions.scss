@@ -1,0 +1,7 @@
+@use 'variables' as v;
+
+@function setColor($theme, $property){
+    @return map-get(map-get(v.$colors, $theme), $property)
+};
+
+// $color: setColor(dark-theme, main-background);

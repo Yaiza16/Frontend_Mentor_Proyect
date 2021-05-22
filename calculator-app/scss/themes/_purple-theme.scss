@@ -1,0 +1,49 @@
+@use '../base/functions' as f;
+
+.main.purple-theme{
+    background-color: f.setColor(pt, main-background);
+    color: f.setColor(pt, text-screen);
+
+    .theme-buttons{
+        background-color: f.setColor(pt, toggle-background);
+    }
+
+    .theme-buttons__item{
+        background-color: f.setColor(pt, key-background-equals);
+    }
+    
+    .theme-buttons__item.dark-theme{
+        background-color: transparent;
+    }
+    
+    .theme-buttons__item.light-theme{
+        background-color: transparent;
+    }
+
+    .screen{
+        background-color: f.setColor(pt, screen-background);
+        color: f.setColor(pt, text-screen);
+    }
+
+    .buttons-container{
+        background-color: f.setColor(pt, toggle-background);
+    }
+
+    .button{
+        background-color: f.setColor(pt, key-background-others);
+        border-color: f.setColor(pt, key-shadow-others);
+        color: f.setColor(pt, text-number);
+    }
+
+    .button[data-result="clear-all"], .button[data-result="clear"]{
+        background-color: f.setColor(pt, key-background);
+        border-color: f.setColor(pt, key-shadow);
+        color: f.setColor(pt, text-others);
+    }
+
+    .button[data-result="equals"]{
+        background-color: f.setColor(pt, key-background-equals);
+        border-color: f.setColor(pt, key-shadow-equals);
+        color: f.setColor(pt, text-equals);
+    }
+}

@@ -1,0 +1,89 @@
+.buttons-container{
+    padding: 1rem;
+    border-radius: .5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: .8rem;
+    grid-template-areas: 
+    "seven eight nine del"
+    "four five six plus"
+    "one two three subtraction"
+    "point cero division multiplication"
+    "reset reset equals equals";
+}
+
+.button[data-number="1"]{
+    grid-area: one;
+}
+
+.button[data-number="2"]{
+    grid-area: two;
+}
+
+.button[data-number="3"]{
+    grid-area: three;
+}
+
+.button[data-number="4"]{
+    grid-area: four;
+}
+
+.button[data-number="5"]{
+    grid-area: five;
+}
+
+.button[data-number="1"]{
+    grid-area: one;
+}
+.button[data-number="6"]{
+    grid-area: six;
+}
+
+.button[data-number="7"]{
+    grid-area: seven;
+}
+
+.button[data-number="8"]{
+    grid-area: eight;
+}
+
+.button[data-number="9"]{
+    grid-area: nine;
+}
+
+.button[data-number="0"]{
+    grid-area: cero;
+}
+
+.button[data-operation="plus"]{
+    grid-area: plus;
+}
+
+.button[data-operation="subtraction"]{
+    grid-area: subtraction;
+}
+
+.button[data-operation="division"]{
+    grid-area: division;
+}
+
+.button[data-operation="point"]{
+    grid-area: point;
+}
+
+.button[data-operation="multiplication"]{
+    grid-area: multiplication;
+}
+
+.button[data-result="clear-all"]{
+    grid-area: reset;
+}
+
+.button[data-result="clear"]{
+    grid-area: del;
+}
+
+.button[data-result="equals"]{
+    grid-area: equals;
+}

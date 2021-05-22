@@ -1,0 +1,6 @@
+@use 'variables' as v;
+
+@mixin font-size($key){
+    font-size: map-get(v.$font-size, $key);
+}
+

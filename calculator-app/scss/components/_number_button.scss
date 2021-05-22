@@ -1,0 +1,14 @@
+@use '../base/mixins' as m;
+
+.button{
+    border-radius: .2rem;
+    border: none;
+    padding: .3rem 0;
+    border-bottom: .15rem solid transparent;
+    cursor: pointer;
+}
+
+.button[data-result]{
+    @include m.font-size(buttons-result);
+}
+

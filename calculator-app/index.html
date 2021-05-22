@@ -5,22 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">
   
   <title>Frontend Mentor | Calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-
+<div class="main dark-theme">
+  <div class="calculator-container">
+    <div class="calculator-header">
+      <h2 class="title-calculator">calc</h2>
+      <div class="theme-toggler">
+        <h3 class="theme-title">Theme</h3>
+        <div class="theme-buttons-container">
+          <div class="theme-numbers">
+            <p class="theme-numbers__item">1</p>
+            <p class="theme-numbers__item">2</p>
+            <p class="theme-numbers__item">3</p>
+          </div>
+          <div class="theme-buttons">
+            <button class="theme-buttons__item dark-theme"></button>
+            <button class="theme-buttons__item light-theme"></button>
+            <button class="theme-buttons__item purple-theme"></button>
+          </div>
+        </div>
+      </div>
+    </div>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <input type="text" class="screen" value="0" readonly>
+  
+    <div class="buttons-container">
+      <button class="button" data-number="1">1</button>
+      <button class="button" data-number="2">2</button>
+      <button class="button" data-number="3">3</button>
+      <button class="button" data-number="4">4</button>
+      <button class="button" data-number="5">5</button>
+      <button class="button" data-number="6">6</button>
+      <button class="button" data-number="7">7</button>
+      <button class="button" data-number="8">8</button>
+      <button class="button" data-number="9">9</button>
+      <button class="button" data-number="0">0</button>
+      <button class="button" data-operation="plus">+</button>
+      <button class="button" data-operation="subtraction">-</button>
+      <button class="button" data-operation="division">/</button>
+      <button class="button" data-operation="point">.</button>
+      <button class="button" data-operation="multiplication">x</button>
+      <button class="button" data-result="clear-all">RESET</button>
+      <button class="button" data-result="clear">DEL</button>
+      <button class="button" data-result="equals">=</button> 
+    </div>
   </div>
+</div>
+  
+  
 </body>
 </html>
