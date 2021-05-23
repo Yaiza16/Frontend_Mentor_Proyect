@@ -207,6 +207,12 @@
   background-color: #eae3dc;
   border-color: #b4a597;
   color: #444b5a;
+  transition: all 0.15s ease-in;
+}
+.main.dark-theme .button:hover {
+  background-color: #637097;
+  border-color: #404e72;
+  color: white;
 }
 .main.dark-theme .button[data-result=clear-all], .main.dark-theme .button[data-result=clear] {
   background-color: #637097;

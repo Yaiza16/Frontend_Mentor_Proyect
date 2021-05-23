@@ -33,6 +33,13 @@
         background-color: f.setColor(dt, key-background-others);
         border-color: f.setColor(dt, key-shadow-others);
         color: f.setColor(dt, text-number);
+        transition: all .15s ease-in;
+
+        &:hover{
+            background-color: f.setColor(dt, key-background);
+            border-color: f.setColor(dt, key-shadow);
+            color: f.setColor(dt, text-others);
+        }
     }
 
     .button[data-result="clear-all"], .button[data-result="clear"]{
