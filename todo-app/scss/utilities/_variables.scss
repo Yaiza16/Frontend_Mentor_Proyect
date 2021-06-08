@@ -1,0 +1,32 @@
+$padding-task: 1rem;
+$gradient-button: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+$theme-colors:(
+    "light":(
+        "logo": white,
+        "background-site": hsl(0, 0%, 98%),
+        "background-tasks": white,
+        "primary-font-color": hsl(236, 9%, 61%),
+        "secundary-font-color": hsl(235, 19%, 35%),
+        "border-color": hsl(233, 11%, 84%)
+    ),
+
+    "dark":(
+        "logo": white,
+        "background-site": hsl(235, 21%, 11%),
+        "background-tasks": hsl(235, 24%, 19%),
+        "primary-font-color": hsl(233, 14%, 35%),
+        "secundary-font-color": hsl(234, 39%, 85%),
+        "border-color": hsla(237, 9%, 61%, 0.466)
+    )
+);
+
+@each $theme-name, $theme-vars in $theme-colors{
+    body.#{$theme-name}{
+        //define a css variable for each color 
+        @each $name, $color in $theme-vars{
+            --#{$name}: #{$color};
+        }
+    }
+}
+

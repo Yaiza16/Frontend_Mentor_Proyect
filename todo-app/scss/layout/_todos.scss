@@ -1,0 +1,96 @@
+@use '../utilities/functions' as f;
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+.todos{
+    background: f.nameGlobalVar(background-site);
+    min-height: calc(100vh - 300px);
+    padding: 1rem 30%;
+}
+
+.todos-container{
+    margin-top: -2.5rem;
+    border-radius: .3rem;
+    background-color: f.nameGlobalVar(background-tasks);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.199);
+}
+
+.todo-items{
+    border-radius: .3rem .3rem 0 0;
+}
+
+.todo-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: v.$padding-task;
+    border-bottom: 1px solid f.nameGlobalVar(border-color);
+
+    &:hover .close-icon{
+        visibility: visible;
+    }
+
+    &.checked{
+
+        & .btn{
+            background: url(/images/icon-check.svg) no-repeat center, v.$gradient-button;
+            border: transparent;
+        }
+
+        & .todo-text{
+            color: f.nameGlobalVar(primary-font-color);
+            text-decoration: line-through;
+        }
+    }
+}
+
+.close-icon{
+    visibility:hidden;
+    cursor: pointer;
+}
+
+.todo-text{
+    width: 100%;
+    font-size: 16px;
+    color: f.nameGlobalVar(secundary-font-color);
+}
+
+.filters{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: f.nameGlobalVar(primary-font-color);
+    border-top: 1px solid f.nameGlobalVar(border-color);
+}
+
+.filters-left{
+    cursor: pointer;
+    display: flex;
+    gap: .2rem;
+
+    &:hover{
+        @include m.hover-filters;
+    }
+}
+
+.filters-type{
+    display: flex;
+    gap: 1rem;
+
+    &__item{
+        cursor: pointer;
+
+        &:hover{
+            @include m.hover-filters;
+        }
+    }
+}
+
+.filters-clear{
+    cursor: pointer;
+
+    &:hover{
+        @include m.hover-filters;
+    }
+}

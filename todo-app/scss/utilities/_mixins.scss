@@ -1,0 +1,5 @@
+@use 'functions' as f;
+
+@mixin hover-filters{
+    color: f.nameGlobalVar(secundary-font-color);
+}

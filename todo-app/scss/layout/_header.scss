@@ -1,0 +1,62 @@
+@use '../utilities/functions' as f;
+@use '../utilities/variables' as v;
+
+.header{
+    height: f.toRem(300);
+    width: 100vw;
+    padding: 1rem 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.background-image{
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.header-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-site{
+    color: f.nameGlobalVar(logo);
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+}
+
+.header-input{
+    background-color: f.nameGlobalVar(background-tasks);
+    display: flex;
+    align-items: center;
+    padding: v.$padding-task;
+    border-radius: .3rem;
+    z-index: 1;
+}
+
+.form-new-task{
+    width: 100%;
+}
+.new-task{
+    background-color: f.nameGlobalVar(background-tasks);
+    font-size: f.toRem(18);
+    font-weight: 400;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.submit{
+    display: none;
+}
+
+.toggle-themes{
+    cursor: pointer;
+}

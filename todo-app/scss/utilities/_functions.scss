@@ -1,0 +1,10 @@
+@use "sass:math";
+
+@function toRem($px){
+    $rem: math.div($px, 16)+rem;
+    @return $rem;
+}
+
+@function nameGlobalVar($name){
+    @return var(--#{$name})
+}

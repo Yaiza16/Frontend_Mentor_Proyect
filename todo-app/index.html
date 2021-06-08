@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">
+  
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body class="light">
+    <header class="header">
+        <img src="images/bg-desktop-light.jpg" alt="" class="background-image">
+        <div class="header-info">
+            <h1 class="title-site">Todo</h1>
+            <div class="toggle-themes">
+                <img src="images/icon-moon.svg" alt="" class="toggle-themes__img" data-theme="light" id="toggle-themes">
+            </div>
+        </div>
+
+        <div class="header-input">
+            <button class="btn"></button>
+            <form action="" class="form-new-task" id="form-new-task">
+                <input type="text" class="new-task" id="new-task" placeholder="Create a new todo...">
+                <input type="submit" class="submit" id="submit">
+            </form>
+        </div>
+    </header>
+
+    <section class="todos">
+        <div class="todos-container">
+            <div class="todo-items" id="tasks-container">
+            </div>
+            <div class="filters" id="filters">
+                <div class="filters-left">
+                    <p class="filters-left__number" id="number-items-left">0</p>
+                    <p class="filters-left__text"> items left</p>
+                </div>
+                <div class="filters-type">
+                    <p class="filter filters-type__item" data-filter="all">All</p>
+                    <p class="filter filters-type__item" data-filter="active">Active</p>
+                    <p class="filter filters-type__item" data-filter="completed">Completed</p>
+                </div>
+                <div class="filters-clear">
+                    <p class="filter fiters-clear__item" data-filter="clear">Clear completed</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="js/app.js"></script>
+</body>
+</html>
